@@ -21,6 +21,7 @@ public class Character {
 	private boolean dead;
 	private BulletControl bulletControl;	// bullet 제어
 	
+	
 	public Character(JFrame app) {
 		viewDirect = ViewDirect.DOWN;
 		isUp = false;

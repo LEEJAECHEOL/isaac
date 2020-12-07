@@ -15,55 +15,15 @@ public class BulletControl {
 	private JFrame app;
 	private Vector<Bullet> bullets = new Vector<Bullet>();
 	private boolean delayBullet = false;
-	private boolean isAttack = false;
+	private boolean isAttacking = false;
 	
 	public BulletControl(JFrame app) {
 		this.app = app;
 		
-		// 불릿 움직이는 스레드
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				while(true) {
-					if(bullets.size() != 0) {
-						for (int i = 0; i < bullets.size(); i++) {
-							if(bullets.get(i).getDirect() == ViewDirect.DOWN) {
-								bullets.get(i).setYBullet(bullets.get(i).getYBullet() + 1);
-							} else if(bullets.get(i).getDirect() == ViewDirect.LEFT) {
-								bullets.get(i).setXBullet(bullets.get(i).getXBullet() - 1);
-							} else if(bullets.get(i).getDirect() == ViewDirect.UP) {
-								bullets.get(i).setYBullet(bullets.get(i).getYBullet() - 1);
-							} else {	// 보는 방향 오른쪽
-								bullets.get(i).setXBullet(bullets.get(i).getXBullet() + 1);
-							}
-							bullets.get(i).getSsBullet().drawObject(bullets.get(i).getXBullet(), bullets.get(i).getYBullet());
-						}
-						try {
-							Thread.sleep(5);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-				}
-			}
-		}).start();
-		// 불릿 충돌시 지우기
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				while(true) {
-					if(bullets.size() != 0) {
-						wallCollison();
-					}
-				}
-			}
-		}).start();
 	}
 	
 	public void addBullet(String gubun, double attackDamage, int direct, int xBullet, int yBullet) {
 		if(!delayBullet) {
-			System.out.println(delayBullet);
 			if(direct == ViewDirect.DOWN) {
 				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 6, yBullet + 18));
 			} else if(direct == ViewDirect.LEFT) {
@@ -90,66 +50,62 @@ public class BulletControl {
 		}
 	}
 	public void drawBullet() {
-		if(bullets.size() != 0) {
-			for (int i = 0; i < bullets.size(); i++) {
-				app.add(bullets.get(i).getSsBullet(),0);
-				bullets.get(i).getSsBullet().drawObject(bullets.get(i).getXBullet(), bullets.get(i).getYBullet());
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isAttacking == false) {
+					isAttacking = true;
+					int collisionCount = 0;
+					while(isAttacking) {
+						if(bullets.size() != 0) {
+							for (int i = 0; i < bullets.size(); i++) {
+								if(bullets.get(i).getXBullet() < 110 || bullets.get(i).getXBullet() > 835 || bullets.get(i).getYBullet() < 90 || bullets.get(i).getYBullet() > 500) {
+									// 충돌 검사
+									if(!bullets.get(i).isCollide()) {
+										collisionCount++;
+									}
+									bullets.get(i).setCollide(true);
+								}
+								// 충돌이 아니면 계속 그림
+								if(!bullets.get(i).isCollide()) {
+									if(bullets.get(i).getDirect() == ViewDirect.DOWN) {
+										bullets.get(i).setYBullet(bullets.get(i).getYBullet() + 1);
+									} else if(bullets.get(i).getDirect() == ViewDirect.LEFT) {
+										bullets.get(i).setXBullet(bullets.get(i).getXBullet() - 1);
+									} else if(bullets.get(i).getDirect() == ViewDirect.UP) {
+										bullets.get(i).setYBullet(bullets.get(i).getYBullet() - 1);
+									} else {	// 보는 방향 오른쪽
+										bullets.get(i).setXBullet(bullets.get(i).getXBullet() + 1);
+									}
+									app.add(bullets.get(i).getSsBullet(), 0);
+									bullets.get(i).getSsBullet().drawObject(bullets.get(i).getXBullet(), bullets.get(i).getYBullet());
+								} else {
+									// 충돌 시 불릿 제거
+									app.remove(bullets.get(i).getSsBullet());
+									app.repaint();
+								}
+							}
+							if(collisionCount == bullets.size()) {
+								isAttacking = false;
+								bullets.removeAllElements();
+							}
+							try {
+								Thread.sleep(5);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+						}
+					}
+					
+				}
+				
 			}
-		}
+		}).start();
 	}
-	
-	public void removeBullet() {
-		for (int i = 0; i < bullets.size(); i++) {
-			if(bullets.get(i).isCollide()) {
-				app.remove(bullets.get(i).getSsBullet());
-				bullets.remove(i);
-			}
-		}
-	}
-	
-	public void removingMotion() {
+	public void removingMotion(Bullet bullet) {
 		
 	}
-	
-	public void wallCollison() {
-		for (int i = 0; i < bullets.size(); i++) {
-			if(bullets.get(i).getXBullet() < 110 || bullets.get(i).getXBullet() > 835 || bullets.get(i).getYBullet() < 90 || bullets.get(i).getYBullet() > 500) {
-				bullets.get(i).setCollide(true);
-			}
-		}
-	}
-//	public void closeEye(int viewDirect) {
-//		switch (viewDirect) {
-//		case 1:	// 보는 방향 아래
-//			ssHead.setXPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
-//			break;
-//		case 2:	// 보는 방향 왼쪽
-//			ssHead.setXPos(IsaacSize.HEADWIDTH * 7 + Gap.COLUMNGAP * 7);
-//			break;
-//		case 3:	// 보는 방향 위
-//			ssHead.setXPos(IsaacSize.HEADWIDTH * 5 + Gap.COLUMNGAP * 5);
-//			break;
-//		case 4:	// 보는 방향 오른쪽
-//			ssHead.setXPos(IsaacSize.HEADWIDTH * 3 + Gap.COLUMNGAP * 3);
-//			break;
-//		}
-//	}
-//	public void openEye(int viewDirect) {
-//		switch (viewDirect) {
-//		case 1:	// 보는 방향 아래
-//			ssHead.setXPos(0);
-//			break;
-//		case 2:	// 보는 방향 왼쪽
-//			ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
-//			break;
-//		case 3:	// 보는 방향 위
-//			ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
-//			break;
-//		case 4:	// 보는 방향 오른쪽
-//			ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);
-//			break;
-//		}
-//	}
 	
 	// 구현되야 하는 것들
 	// 몹 충돌
