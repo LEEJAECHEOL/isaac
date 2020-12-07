@@ -1,0 +1,5 @@
+package character;
+
+public class CharaterMoveThread {
+
+}

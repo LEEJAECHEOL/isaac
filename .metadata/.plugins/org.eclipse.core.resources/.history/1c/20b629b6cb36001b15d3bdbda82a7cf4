@@ -1,0 +1,29 @@
+package bullet;
+
+import SpriteSheet.SpriteSheet;
+import lombok.Data;
+import objectSize.BulletSize;
+
+@Data
+
+public class Bullet {
+	private final static String TAG = "Bullet : ";
+	private SpriteSheet ssBullet;
+	private String gubun; 	// 아이작의 불릿인지 적의 불릿인지 구분하기 위함
+	private double attackDamage;	// Bullet Damage
+	private int direct; // 쏘는 방향(캐릭터의 바라보는 방향)
+	
+	public Bullet(String gubun, double attackDamage, int direct) {
+		this.gubun = gubun;
+		String url = null;
+		if(gubun == "isaac") {
+			url = "bullet/isaacBullet.png";
+		} else {
+			url = "bullet/enemyBullet.png";
+		}
+		ssBullet = new SpriteSheet(url, gubun, 0, 0, BulletSize.WIDTH, BulletSize.HEIGHT);
+		this.attackDamage = attackDamage;
+		this.direct = direct;
+	}
+	
+}

@@ -1,0 +1,39 @@
+package character;
+
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import SpriteSheet.SpriteSheet;
+import lombok.Data;
+
+@Data
+
+public class Character extends JLabel {
+	private final static String GUBUN = "Character : ";
+	private double life, maxLife;		// 생명, 최대 생명력
+	private double attackDamge;	// 공격
+	private int viewDirect; // 1 : 아래, 2: 왼쪽, 3: 위쪽, 4 : 오른쪽
+	private boolean isTop, isBottom, isRight, isLeft;	// 키를 눌렸는지 안눌렸는지 체크
+	private int xChar, yChar;	// 캐릭터 위치
+	private boolean dead;
+	
+	public Character() {
+		viewDirect = 1;
+		isTop = false;
+		isBottom = true;
+		isRight = false;
+		isLeft = false;
+		dead = false;
+	}
+	
+	public void moveRight() {}
+	public void moveLeft() {}
+	public void moveTop() {}
+	public void moveBottome() {}
+	public void dead() {}
+	
+	
+	
+	
+}

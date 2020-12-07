@@ -1,0 +1,88 @@
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import character.Isaac;
+
+public class IsaacApp extends JFrame {
+
+	private JLabel laBackground;
+	private Isaac isaac;
+
+	public IsaacApp() {
+		init();
+		setting();
+		batch();
+		listener();
+		setVisible(true);
+	}
+	public void init() {
+		isaac = new Isaac();
+		laBackground = new JLabel(new ImageIcon("images/structure/map.png"));
+		
+	}
+	public void setting() {
+		setTitle("IsaacApp");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(960, 640);
+		setLayout(null);
+		setContentPane(laBackground);
+		
+		
+	}
+	public void batch() {
+		add(isaac.getSsHead());
+		add(isaac.getSsBody());
+		for (int i = 0; i < isaac.getBulletControl().getBullets().size(); i++) {
+			add(isaac.getBulletControl().getBullets().get(i).getSsBullet());
+		}
+	}
+	public void listener() {
+		keyboardEvent();
+	}
+	
+	public static void main(String[] args) {
+		new IsaacApp();
+	}
+	public void keyboardEvent() {
+		addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+					isaac.moveRight();
+				} else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+					isaac.moveLeft();
+				} else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+					isaac.moveDown();
+				} else if(e.getKeyCode() == KeyEvent.VK_UP) {
+					isaac.moveUp();
+				} else if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+					isaac.getBulletControl().addBullet("isaac", isaac.getAttackDamge(), isaac.getViewDirect(), isaac.getXChar(), isaac.getYChar());
+				}
+			}
+			@Override
+			public void keyReleased(KeyEvent e) {
+				if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+					isaac.setRight(false);
+					isaac.refreshDirect();
+				} else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+					isaac.setLeft(false);
+					isaac.refreshDirect();
+				} else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+					isaac.setDown(false);
+					isaac.refreshDirect();
+				} else if(e.getKeyCode() == KeyEvent.VK_UP) {
+					isaac.setUp(false);
+					isaac.refreshDirect();
+				} 
+			}
+		});
+	}
+	public void checkDirect() {
+		
+	}
+
+}

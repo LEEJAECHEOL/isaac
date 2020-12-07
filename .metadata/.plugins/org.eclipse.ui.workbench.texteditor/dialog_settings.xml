@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="isAttack"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="isAttack"/>
+			<item value="//public void closeEye(int viewDirect) {&#x0A;//switch (viewDirect) {&#x0A;//case 1:&#x09;// 보는 방향 아래&#x0A;//&#x09;ssHead.setXPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);&#x0A;//&#x09;break;&#x0A;//case 2:&#x09;// 보는 방향 왼쪽&#x0A;//&#x09;ssHead.setXPos(IsaacSize.HEADWIDTH * 7 + Gap.COLUMNGAP * 7);&#x0A;//&#x09;break;&#x0A;//case 3:&#x09;// 보는 방향 위&#x0A;//&#x09;ssHead.setXPos(IsaacSize.HEADWIDTH * 5 + Gap.COLUMNGAP * 5);&#x0A;//&#x09;break;&#x0A;//case 4:&#x09;// 보는 방향 오른쪽&#x0A;//&#x09;ssHead.setXPos(IsaacSize.HEADWIDTH * 3 + Gap.COLUMNGAP * 3);&#x0A;//&#x09;break;&#x0A;//}&#x0A;//}&#x0A;//public void openEye(int viewDirect) {&#x0A;//switch (viewDirect) {&#x0A;//case 1:&#x09;// 보는 방향 아래&#x0A;//&#x09;ssHead.setXPos(0);&#x0A;//&#x09;break;&#x0A;//case 2:&#x09;// 보는 방향 왼쪽&#x0A;//&#x09;ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);&#x0A;//&#x09;break;&#x0A;//case 3:&#x09;// 보는 방향 위&#x0A;//&#x09;ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);&#x0A;//&#x09;break;&#x0A;//case 4:&#x09;// 보는 방향 오른쪽&#x0A;//&#x09;ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);&#x0A;//&#x09;break;&#x0A;//}&#x0A;//}"/>
+			<item value="system"/>
+			<item value="sys"/>
+			<item value="ROW"/>
+			<item value="body"/>
+			<item value="head"/>
+			<item value="xChange"/>
+		</list>
+		<list key="replacehistory">
+			<item value="ssBody"/>
+			<item value="ssHead"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="409"/>
+		<item key="DIALOG_Y_ORIGIN" value="283"/>
+		<item key="DIALOG_WIDTH" value="292"/>
+		<item key="DIALOG_HEIGHT" value="402"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+</section>

@@ -1,0 +1,15 @@
+package map;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Background {
+	private JFrame app;
+	private JLabel laBackground;
+	
+	public Background(JFrame app) {
+		this.app = app;
+		laBackground = new JLabel(new ImageIcon("images/structure/map.png"));
+	}
+}

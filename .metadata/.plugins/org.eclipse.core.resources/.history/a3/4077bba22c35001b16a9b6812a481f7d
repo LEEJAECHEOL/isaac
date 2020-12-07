@@ -1,0 +1,44 @@
+package SpriteSheet;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import lombok.Data;
+
+@Data
+public class SpriteSheet {
+    private BufferedImage imgObject, imgSprite;	// 객체 이미지, 스프리트시
+    private String url;	// 이미지 url
+    private int xPos, yPos;		// 이미지 위치 x, y 좌표
+    private int width, height;	// 이미지 가로 세로 길이
+	public SpriteSheet(BufferedImage imgObject, BufferedImage imgSprite, String url, int xPos, int yPos,
+			int width, int height) {
+		super();
+		this.imgObject = imgObject;
+		this.imgSprite = imgSprite;
+		this.url = url;
+		this.xPos = xPos;
+		this.yPos = yPos;
+		this.width = width;
+		this.height = height;
+	}
+	public SpriteSheet() {
+		// TODO Auto-generated constructor stub
+	}
+	public void loadSpriteImage(String url) {
+		try {
+			imgSprite = ImageIO.read(new File("images/" + url));
+		} catch (IOException e) {
+			System.out.println("이미지 로드 실패");
+		}	
+	}
+	public void draw() {
+		
+	}
+    
+
+	
+}
