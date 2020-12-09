@@ -5,6 +5,8 @@ import java.util.Vector;
 import javax.swing.JFrame;
 import SpriteSheet.SpriteSheet;
 import lombok.Data;
+import objectSize.BulletSize;
+import objectSize.Gap;
 import objectSize.ViewDirect;
 
 @Data
@@ -25,13 +27,13 @@ public class BulletControl {
 	public void addBullet(String gubun, double attackDamage, int direct, int xBullet, int yBullet) {
 		if(!delayBullet) {
 			if(direct == ViewDirect.DOWN) {
-				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 6, yBullet + 18));
+				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 15, yBullet + 18));
 			} else if(direct == ViewDirect.LEFT) {
-				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet - 13, yBullet + 8));
+				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet - 13, yBullet + 12));
 			} else if(direct == ViewDirect.UP) {
-				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 6, yBullet - 14));
+				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 15, yBullet - 14));
 			} else {
-				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 26, yBullet + 8));
+				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 26, yBullet + 12));
 			}
 			drawBullet();
 			// 불릿을 쏘고 난뒤 다시 쏠수 있도록 바꾸는 부분
@@ -81,8 +83,9 @@ public class BulletControl {
 									bullets.get(i).getSsBullet().drawObject(bullets.get(i).getXBullet(), bullets.get(i).getYBullet());
 								} else {
 									// 충돌 시 불릿 제거
-									app.remove(bullets.get(i).getSsBullet());
-									app.repaint();
+									if(!bullets.get(i).isPop()) {
+										removingMotion(bullets.get(i));
+									}
 								}
 							}
 							if(collisionCount == bullets.size()) {
@@ -104,7 +107,36 @@ public class BulletControl {
 		}).start();
 	}
 	public void removingMotion(Bullet bullet) {
-		
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				bullet.setPop(true);
+				bullet.getSsBullet().setYPos(21);
+				bullet.getSsBullet().setWidth(BulletSize.POPWIDTH);
+				bullet.getSsBullet().setHeight(BulletSize.POPHEIGHT);
+				int rowCount = 0;
+				for(int i = 0; i < 12; i ++) {
+					if(i % 4 == 0 && i > 0) {
+						rowCount += 1;
+					}
+					int x = BulletSize.POPWIDTH * (i % 4) + Gap.COLUMNGAP * (i % 4);
+					int y = (BulletSize.HEIGHT + Gap.ROWGAP) + (BulletSize.POPHEIGHT * rowCount)  + (Gap.ROWGAP * rowCount);
+					
+					bullet.getSsBullet().setXPos(x);
+					bullet.getSsBullet().setYPos(y);
+					bullet.getSsBullet().drawObject(bullet.getXBullet()-20, bullet.getYBullet()-20);
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				app.remove(bullet.getSsBullet());
+				app.repaint();
+			}
+		}).start();
+
 	}
 	
 	// 구현되야 하는 것들

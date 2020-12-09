@@ -45,11 +45,11 @@ public class SpriteSheet extends JLabel {
 	}
 	
 	// 자른 이미지를 화면에 그림.
-    public void drawObject(int xChar, int yChar) {
+    public void drawObject(int x, int y) {
     	imgObject = new ImageIcon(getObjectImage());
 		setIcon(imgObject);
 		setSize(width, height);	// 라벨에 대한 사이즈
-		setLocation(xChar, yChar);
+		setLocation(x, y);
 //		System.out.println(TAG + gubun + "그려짐");
     	
     }

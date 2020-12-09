@@ -1,0 +1,12 @@
+package structure;
+
+import javax.swing.JFrame;
+
+public class Rock extends Structure {
+
+	public Rock(JFrame frmae, String url, String gubun, int xStructure, int yStructure) {
+		super(frmae, url, gubun, xStructure, yStructure);
+		// TODO Auto-generated constructor stub
+	}
+
+}

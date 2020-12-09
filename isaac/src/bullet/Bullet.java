@@ -13,7 +13,7 @@ public class Bullet {
 	private double attackDamage;	// Bullet Damage
 	private int direct; // 쏘는 방향(캐릭터의 바라보는 방향) 1 : 아래, 2: 왼쪽, 3: 위쪽, 4 : 오른쪽
 	private int xBullet, yBullet;	// 불릿 x, y 좌표
-	private boolean isCollide;
+	private boolean isCollide, isPop;
 	
 	public Bullet(String gubun, double attackDamage, int direct, int xBullet, int yBullet) {
 		System.out.println(TAG+ gubun + " bullet 생성");
@@ -30,6 +30,7 @@ public class Bullet {
 		this.xBullet = xBullet;
 		this.yBullet = yBullet;
 		this.isCollide = false;
+		this.isPop = false;
 	}
 	
 }

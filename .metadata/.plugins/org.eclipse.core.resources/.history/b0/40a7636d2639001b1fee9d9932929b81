@@ -1,0 +1,22 @@
+package structure;
+
+import javax.swing.JFrame;
+
+import SpriteSheet.SpriteSheet;
+import objectSize.StructureSize;
+
+public class Structure {
+
+	private JFrame app;
+	private final static String GUBUN = "Structure : ";
+	private SpriteSheet ssStructure;
+	private int xStructure, yStructure;
+	
+	public Structure(JFrame frmae,String url, String gubun, int xStructure, int yStructure) {
+		this.app = app;
+		ssStructure = new SpriteSheet(url, gubun, 0, 0, StructureSize.WIDTH, StructureSize.HEIGHT);
+		this.xStructure = xStructure;
+		this.yStructure = yStructure;
+	}
+	
+}

@@ -1,6 +1,7 @@
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.LinkedList;
+import java.util.Vector;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -8,11 +9,15 @@ import javax.swing.JLabel;
 
 import character.Isaac;
 import map.Background;
+import structure.Rock;
+import structure.Spike;
 
 public class IsaacApp extends JFrame {
 	private JFrame app;
 	private Background bg;	// background
 	private Isaac isaac;	// player
+	private Vector<Rock> rock;
+	private Vector<Spike> spike;
 	
 	public IsaacApp() {
 		init();
@@ -25,7 +30,31 @@ public class IsaacApp extends JFrame {
 	public void init() {
 		app = this;
 		bg = new Background(app);
-		isaac = new Isaac(app);
+		rock = new Vector<Rock>();
+		spike = new Vector<Spike>();
+		// 구석자리 바위
+		rock.add(new Rock(app, 125, 115));
+		rock.add(new Rock(app, 740, 115));
+		rock.add(new Rock(app, 785, 160));
+		rock.add(new Rock(app, 375, 275));
+		// center 바위
+		rock.add(new Rock(app, 425, 225));
+		rock.add(new Rock(app, 475, 225));
+		rock.add(new Rock(app, 425, 275));
+		rock.add(new Rock(app, 475, 275));
+		rock.add(new Rock(app, 525, 275));
+		rock.add(new Rock(app, 425, 325));
+		rock.add(new Rock(app, 475, 325));
+
+		spike.add(new Spike(app, 125, 165));
+		spike.add(new Spike(app, 130, 445));
+		spike.add(new Spike(app, 180, 445));
+		spike.add(new Spike(app, 675, 275));
+		spike.add(new Spike(app, 675, 325));
+		
+		
+		isaac = new Isaac(app, rock, spike);
+		
 	}
 	
 	public void setting() {

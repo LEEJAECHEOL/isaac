@@ -23,6 +23,7 @@ public class Character {
 	
 	
 	public Character(JFrame app) {
+		this.app = app;
 		viewDirect = ViewDirect.DOWN;
 		isUp = false;
 		isDown = false;

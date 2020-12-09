@@ -2,6 +2,8 @@ package character;
 
 
 
+import java.util.Vector;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -9,7 +11,10 @@ import SpriteSheet.SpriteSheet;
 import lombok.Data;
 import objectSize.Gap;
 import objectSize.IsaacSize;
+import objectSize.StructureSize;
 import objectSize.ViewDirect;
+import structure.Rock;
+import structure.Spike;
 
 @Data
 
@@ -19,28 +24,32 @@ public class Isaac extends Character{
 	private Isaac isaac = this;
 	
 	private SpriteSheet ssHead, ssBody;
+	private Vector<Rock> rock;
+	private Vector<Spike> spike;
+	private int xPlusBody = 8, yPlusBody = 30;
 	
-	public Isaac(JFrame app) {
+	
+	public Isaac(JFrame app, Vector<Rock> rock, Vector<Spike> spike) {
 		super(app);
 		System.out.println(TAG + "make Isaac");
-		setApp(app);
-		init();
+		init(rock, spike);
 		setting();
 		batch();
 	}
-	public void init() {
+	public void init(Vector<Rock> rock, Vector<Spike> spike) {
 		ssHead = new SpriteSheet("isaac/isaac.png", "IsaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
 		ssBody = new SpriteSheet("isaac/isaac.png", "IsaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
-		
+		this.rock = rock;
+		this.spike = spike;
 	}
 	public void setting() {
 		setXChar(480);	// 아이작 초반 x위치 480 설정
-		setYChar(300);	// 아이작 초반 y위치 300 설정
+		setYChar(430);	// 아이작 초반 y위치 300 설정
 		setAttackDamge(1);	// 아이작 공격력 1 세팅
 		setLife(6);	//	생명력 6 설정
 		setMaxLife(6);	//	최대 생명력 6설정
 		ssHead.drawObject(getXChar(), getYChar());	// 아이작 머리 위치 설정
-		ssBody.drawObject(getXChar() + 4, getYChar() + 20);	//아이작 몸 위치 설정
+		ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);	//아이작 몸 위치 설정
 	}
 	public void batch() {
 		getApp().add(ssHead, 0);	// 머리 배치
@@ -60,12 +69,29 @@ public class Isaac extends Character{
 					int motion = 0;
 					setViewDirect(ViewDirect.RIGHT);
 					while(isRight()) {
+						// 벽 충돌 검사
 						if(getXChar() + IsaacSize.BODYWIDTH > 820) {
 							setRight(false);
 							refreshDirect();
 							break;
 						}
-						if(motion == 10)
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() && getXChar() + IsaacSize.HEADWIDTH < rock.get(i).getXStructure() + StructureSize.WIDTH 
+								&& getYChar() + IsaacSize.HEADHEIGHT > rock.get(i).getYStructure() - 10 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 20) {
+								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setRight(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						if(motion > 9)
 							motion = 0;
 						setXChar(getXChar() + 3);
 						ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
@@ -73,7 +99,7 @@ public class Isaac extends Character{
 							ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);	// 머리 이미지 x좌표
 							ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT + Gap.ROWGAP * 2);	// 몸 이미지 y좌표
 							ssHead.drawObject(getXChar(), getYChar());
-							ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+							ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 							motion += 1;
 						}
 						try {
@@ -83,7 +109,7 @@ public class Isaac extends Character{
 						}
 					}
 					ssBody.setXPos(0);
-					ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 				}
 			}
 		}).start();
@@ -106,6 +132,22 @@ public class Isaac extends Character{
 							refreshDirect();
 							break;
 						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXChar() > rock.get(i).getXStructure() && getXChar()< rock.get(i).getXStructure() + StructureSize.WIDTH 
+								&& getYChar() + IsaacSize.HEADHEIGHT > rock.get(i).getYStructure() - 10 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 20) {
+								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
+								isRockCollision = true;
+								break;
+							}
+						}
+						// 바위 충돌 검사. 끝
+						if(isRockCollision) {
+							setLeft(false);
+							refreshDirect();
+							break;
+						}
 						if(motion > 9)
 							motion = 0;
 						setXChar(getXChar() - 3);
@@ -114,7 +156,7 @@ public class Isaac extends Character{
 							ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
 							ssBody.setYPos(73);
 							ssHead.drawObject(getXChar(), getYChar());
-							ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+							ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 							motion += 1;
 						}
 						try {
@@ -124,7 +166,7 @@ public class Isaac extends Character{
 						}
 					}
 					ssBody.setXPos(0);
-					ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 				}
 			}
 		}).start();
@@ -147,15 +189,32 @@ public class Isaac extends Character{
 							refreshDirect();
 							break;
 						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() + 5 && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH - 5
+								&& getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT > rock.get(i).getYStructure() && getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
 						if(motion > 9)
 							motion = 0;
 						setYChar(getYChar() + 3);
+						// 모션
 						ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
 						if(getViewDirect() == ViewDirect.DOWN) {
 							ssHead.setXPos(0);
 							ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
 							ssHead.drawObject(getXChar(), getYChar());
-							ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+							ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 							motion += 1;
 						}
 						try {
@@ -165,7 +224,7 @@ public class Isaac extends Character{
 						}
 					}
 					ssBody.setXPos(0);
-					ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 				}
 			}
 		}).start();
@@ -188,15 +247,31 @@ public class Isaac extends Character{
 							refreshDirect();
 							break;
 						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() + 5 && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH - 10
+								&& getYChar() > rock.get(i).getYStructure() - 20 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 10) {
+								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
 						if(motion > 9)
 							motion = 0;
 						setYChar(getYChar() - 3);
 						ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
 						if(getViewDirect() == ViewDirect.UP) {
 							ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
-							ssBody.setYPos(31);
+							ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
 							ssHead.drawObject(getXChar(), getYChar());
-							ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+							ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 							motion += 1;
 						}
 						try {
@@ -206,10 +281,13 @@ public class Isaac extends Character{
 						}
 					}
 					ssBody.setXPos(0);
-					ssBody.drawObject(getXChar() + 4, getYChar() + 20);
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 				}
 			}
 		}).start();
+	}
+	public void move() {
+		
 	}
 	public void refreshDirect() {
 		if(isaac.isDown()) {
@@ -227,7 +305,21 @@ public class Isaac extends Character{
 	}
 	@Override
 	public void attack() {
-		isaac.getBulletControl().addBullet("isaac", isaac.getAttackDamge(), isaac.getViewDirect(), isaac.getXChar(), isaac.getYChar());
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+					closeEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					try {
+						Thread.sleep(300);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					openEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					isaac.getBulletControl().addBullet("isaac", isaac.getAttackDamge(), isaac.getViewDirect(), isaac.getXChar(), isaac.getYChar());
+			}
+		}).start();
 	}
 	
 	public void closeEye(int viewDirect) {
@@ -263,31 +355,6 @@ public class Isaac extends Character{
 		}
 	}
 }
-// 2초마다 눈깜박임
-//new Thread(new Runnable() {
-//	@Override
-//	public void run() {
-//		int xCurrent;
-//		int xChange;
-//		while(true) {
-//			try {
-//				Thread.sleep(2000);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			closeEye(getViewDirect());
-//			head.drawObject(getXChar(), getYChar());
-//			try {
-//				Thread.sleep(500);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			openEye(getViewDirect());
-//			ssHead.drawObject(getXChar(), getYChar());
-//			
-//		}
-//	}
-//}).start();
 
 
 
