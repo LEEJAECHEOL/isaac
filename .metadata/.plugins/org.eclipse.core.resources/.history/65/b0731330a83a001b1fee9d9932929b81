@@ -1,0 +1,12 @@
+package character;
+
+import javax.swing.JFrame;
+
+public class Worm extends Character {
+
+	public Worm(JFrame app) {
+		super(app);
+		
+	}
+
+}

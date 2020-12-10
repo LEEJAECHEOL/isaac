@@ -1,0 +1,53 @@
+package character;
+
+import javax.swing.JFrame;
+
+import SpriteSheet.SpriteSheet;
+import objectSize.IsaacSize;
+import objectSize.ViewDirect;
+import objectSize.WormSize;
+
+public class Worm extends Character {
+	
+	private Worm worm = this;
+	private final static String GUBUN = "Worm : ";
+	
+	private SpriteSheet ssBody;
+
+	public Worm(JFrame app) {
+		super(app);
+		init();
+		setting();
+		batch();
+	}
+	public void init() {
+		ssBody = new SpriteSheet("monster/worm.png", "monster", 0, 0, WormSize.RLWIDTH, WormSize.RLHEIGHT);
+	}
+	public void setting() {
+		setViewDirect(ViewDirect.RIGHT);
+		setXChar(180);
+		setYChar(130);	
+		setLife(6);
+		setAttackDamge(1);
+	}
+	public void batch() {
+		ssBody.drawObject(getXChar(), getYChar());
+		getApp().add(ssBody, 1);
+	}
+	@Override
+	public void moveRight() {
+		
+	}
+	@Override
+	public void moveLeft() {
+		
+	}
+	@Override
+	public void moveUp() {
+		
+	}
+	@Override
+	public void moveDown() {
+		
+	}
+}

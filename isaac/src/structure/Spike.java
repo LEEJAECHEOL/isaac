@@ -8,7 +8,7 @@ public class Spike extends Structure {
 	private double damage;
 	
 	public Spike(JFrame app, int xStructure, int yStructure) {
-		super(app, "structure/spike.png", "Spike", xStructure, yStructure);
+		super(app, "structure/spike.png", "spike", xStructure, yStructure);
 		System.out.println(TAG + "만들어짐");
 		drawStructure();
 		this.damage = 0.5;

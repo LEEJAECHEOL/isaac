@@ -1,0 +1,140 @@
+package character;
+
+import javax.swing.JFrame;
+
+import SpriteSheet.SpriteSheet;
+import objectSize.Gap;
+import objectSize.IsaacSize;
+import objectSize.ViewDirect;
+import objectSize.WormSize;
+
+public class Worm extends Character {
+	
+	private Worm worm = this;
+	private final static String GUBUN = "Worm : ";
+	
+	private Isaac isaac;
+	private SpriteSheet ssBody;
+
+	public Worm(JFrame app, Isaac isaac) {
+		super(app);
+		this.isaac = isaac;
+		init();
+		setting();
+		batch();
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("run");
+				while(!isDead()) {
+					moveDirectCheck();
+					moveRight();
+					moveLeft();
+					moveUp();
+					moveDown();
+					moveMotion();
+					ssBody.drawObject(getXChar(), getYChar());
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+	}
+	public void init() {
+		ssBody = new SpriteSheet("monster/worm.png", "monster", 0, 0, WormSize.RLWIDTH, WormSize.RLHEIGHT);
+	}
+	public void setting() {
+		setViewDirect(ViewDirect.RIGHT);
+		setXChar(180);
+		setYChar(130);	
+		setLife(8);
+		setAttackDamge(1);
+	}
+	public void batch() {
+		ssBody.drawObject(getXChar(), getYChar());
+		getApp().add(ssBody, 1);
+	}
+	public void moveDirectCheck() {
+		if(isaac.getXChar() > getXChar()) {
+			setRight(true);
+		} else {
+			setRight(false);
+		}
+		if(isaac.getXChar() < getXChar()) {
+			setLeft(true);
+		} else {
+			setLeft(false);
+		}
+		if(isaac.getYChar() + IsaacSize.BODYHEIGHT > getYChar()) {
+			setDown(true);
+		}else {
+			setDown(false);
+		}
+		if(isaac.getYChar() + IsaacSize.BODYHEIGHT < getYChar()) {
+			setUp(true);
+		}else {
+			setUp(false);
+		}
+			
+	}
+	@Override
+	public void moveRight() {
+		if(isRight()) {
+			setViewDirect(ViewDirect.RIGHT);
+			setXChar(getXChar() + 1);
+		}
+	}
+	@Override
+	public void moveLeft() {
+		if(isLeft()) {
+			setViewDirect(ViewDirect.LEFT);
+			setXChar(getXChar() - 1);
+		}
+	}
+	@Override
+	public void moveUp() {
+		if(isUp()) {
+			setViewDirect(ViewDirect.UP);
+			setYChar(getYChar() - 1);
+		}
+	}
+	@Override
+	public void moveDown() {
+		if(isDown()) {
+			setViewDirect(ViewDirect.DOWN);
+			setYChar(getYChar() + 1);
+		}
+	}
+	public void moveMotion() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				int motion = 0;
+				if(isRight()) {
+					if(motion > 3)
+						motion = 0;
+					ssBody.setXPos((WormSize.RLWIDTH * motion) + (Gap.COLUMNGAP * motion));
+					if(getViewDirect() == ViewDirect.RIGHT) {
+						ssBody.setYPos(0);	// 몸 이미지 y좌표
+						ssBody.drawObject(getXChar(), getYChar());
+						motion += 1;
+					}
+				}
+				if(isLeft()) {
+					if(motion > 3)
+						motion = 0;
+					ssBody.setXPos((WormSize.RLWIDTH * motion) + (Gap.COLUMNGAP * motion));
+					if(getViewDirect() == ViewDirect.LEFT) {
+						ssBody.setYPos(0);	// 몸 이미지 y좌표
+						ssBody.drawObject(getXChar(), getYChar());
+						motion += 1;
+					}
+				}
+			}
+		}).start();
+	}
+}

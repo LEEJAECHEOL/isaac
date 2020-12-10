@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import SpriteSheet.SpriteSheet;
+import bullet.BulletControl;
 import lombok.Data;
 import objectSize.Gap;
 import objectSize.IsaacSize;
@@ -37,17 +38,19 @@ public class Isaac extends Character{
 		batch();
 	}
 	public void init(Vector<Rock> rock, Vector<Spike> spike) {
-		ssHead = new SpriteSheet("isaac/isaac.png", "IsaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
-		ssBody = new SpriteSheet("isaac/isaac.png", "IsaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
+		ssHead = new SpriteSheet("isaac/isaac.png", "isaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
+		ssBody = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
 		this.rock = rock;
 		this.spike = spike;
+		setBulletControl(new BulletControl(getApp()));
 	}
 	public void setting() {
+		setViewDirect(ViewDirect.DOWN);
 		setXChar(480);	// 아이작 초반 x위치 480 설정
-		setYChar(430);	// 아이작 초반 y위치 300 설정
+		setYChar(430);	// 아이작 초반 y위치 430 설정
 		setAttackDamge(1);	// 아이작 공격력 1 세팅
 		setLife(6);	//	생명력 6 설정
-		setMaxLife(6);	//	최대 생명력 6설정
+		setMaxLife(5);	//	최대 생명력 6설정
 		ssHead.drawObject(getXChar(), getYChar());	// 아이작 머리 위치 설정
 		ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);	//아이작 몸 위치 설정
 	}
@@ -154,7 +157,7 @@ public class Isaac extends Character{
 						ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
 						if(getViewDirect() == ViewDirect.LEFT) {
 							ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
-							ssBody.setYPos(73);
+							ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 2 + Gap.ROWGAP * 3);
 							ssHead.drawObject(getXChar(), getYChar());
 							ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
 							motion += 1;

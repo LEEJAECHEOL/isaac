@@ -24,13 +24,11 @@ public class Character {
 	
 	public Character(JFrame app) {
 		this.app = app;
-		viewDirect = ViewDirect.DOWN;
 		isUp = false;
 		isDown = false;
 		isRight = false;
 		isLeft = false;
 		dead = false;
-		bulletControl = new BulletControl(app);
 	}
 	
 	public void moveRight() {}

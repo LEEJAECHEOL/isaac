@@ -1,0 +1,15 @@
+package character;
+
+import javax.swing.JFrame;
+
+public class Worm extends Character {
+	
+	private Worm worm = this;
+	private final static String GUBUN = "Worm : ";
+
+	public Worm(JFrame app) {
+		super(app);
+		
+	}
+
+}

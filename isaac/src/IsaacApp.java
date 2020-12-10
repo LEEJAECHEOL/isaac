@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import character.Isaac;
+import character.Worm;
 import map.Background;
 import structure.Rock;
 import structure.Spike;
@@ -18,6 +19,7 @@ public class IsaacApp extends JFrame {
 	private Isaac isaac;	// player
 	private Vector<Rock> rock;
 	private Vector<Spike> spike;
+	private Worm worm;	// Worm
 	
 	public IsaacApp() {
 		init();
@@ -54,6 +56,7 @@ public class IsaacApp extends JFrame {
 		
 		
 		isaac = new Isaac(app, rock, spike);
+		worm = new Worm(app, isaac, rock);
 		
 	}
 	

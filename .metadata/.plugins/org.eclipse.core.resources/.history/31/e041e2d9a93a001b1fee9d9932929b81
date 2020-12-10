@@ -1,0 +1,20 @@
+package character;
+
+import javax.swing.JFrame;
+
+import SpriteSheet.SpriteSheet;
+import objectSize.IsaacSize;
+
+public class Worm extends Character {
+	
+	private Worm worm = this;
+	private final static String GUBUN = "Worm : ";
+	
+	private SpriteSheet body;
+
+	public Worm(JFrame app) {
+		super(app);
+		body = new SpriteSheet("monster/worm.png", "Worm", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
+	}
+
+}

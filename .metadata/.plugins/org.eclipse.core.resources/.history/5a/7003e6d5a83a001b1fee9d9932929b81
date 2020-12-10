@@ -1,0 +1,19 @@
+package character;
+
+import javax.swing.JFrame;
+
+import SpriteSheet.SpriteSheet;
+
+public class Worm extends Character {
+	
+	private Worm worm = this;
+	private final static String GUBUN = "Worm : ";
+	
+	private SpriteSheet body;
+
+	public Worm(JFrame app) {
+		super(app);
+		
+	}
+
+}
