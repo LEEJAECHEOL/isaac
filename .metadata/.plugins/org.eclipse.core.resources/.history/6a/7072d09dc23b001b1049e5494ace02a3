@@ -42,7 +42,7 @@ public class Isaac extends Character{
 		ssBody = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
 		this.rock = rock;
 		this.spike = spike;
-		setBulletControl(new BulletControl(getApp(), rock));
+		setBulletControl(new BulletControl(getApp()));
 	}
 	public void setting() {
 		setViewDirect(ViewDirect.DOWN);

@@ -74,7 +74,7 @@ public class BulletControl {
 								}
 								// 바위 충돌 검사.
 								for(int j = 0; j < rock.size(); j++) {
-									if(bullets.get(i).getXBullet() + BulletSize.WIDTH > rock.get(j).getXStructure() && bullets.get(i).getXBullet() < rock.get(j).getXStructure() + StructureSize.WIDTH 
+									if(bullets.get(i).getXBullet() > rock.get(j).getXStructure() && bullets.get(i).getXBullet() < rock.get(j).getXStructure() + StructureSize.WIDTH 
 										&& bullets.get(i).getYBullet() + BulletSize.HEIGHT > rock.get(j).getYStructure() && bullets.get(i).getYBullet() < rock.get(j).getYStructure() + StructureSize.HEIGHT) {
 										if(!bullets.get(i).isCollide()) {
 											collisionCount++;
