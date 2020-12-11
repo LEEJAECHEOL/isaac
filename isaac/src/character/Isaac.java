@@ -73,7 +73,7 @@ public class Isaac extends Character{
 					setViewDirect(ViewDirect.RIGHT);
 					while(isRight()) {
 						// 벽 충돌 검사
-						if(getXChar() + IsaacSize.BODYWIDTH > 820) {
+						if(getXChar() + IsaacSize.BODYWIDTH > 810) {
 							setRight(false);
 							refreshDirect();
 							break;
@@ -83,7 +83,6 @@ public class Isaac extends Character{
 						for(int i = 0; i < rock.size(); i++) {
 							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() && getXChar() + IsaacSize.HEADWIDTH < rock.get(i).getXStructure() + StructureSize.WIDTH 
 								&& getYChar() + IsaacSize.HEADHEIGHT > rock.get(i).getYStructure() - 10 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 20) {
-								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
 								isRockCollision = true;
 								break;
 							}
@@ -140,7 +139,6 @@ public class Isaac extends Character{
 						for(int i = 0; i < rock.size(); i++) {
 							if(getXChar() > rock.get(i).getXStructure() && getXChar()< rock.get(i).getXStructure() + StructureSize.WIDTH 
 								&& getYChar() + IsaacSize.HEADHEIGHT > rock.get(i).getYStructure() - 10 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 20) {
-								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
 								isRockCollision = true;
 								break;
 							}
@@ -187,7 +185,7 @@ public class Isaac extends Character{
 					ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
 					setViewDirect(ViewDirect.DOWN);
 					while(isDown()) {
-						if(getYChar() > 455) {
+						if(getYChar() > 440) {
 							setDown(false);
 							refreshDirect();
 							break;
@@ -197,7 +195,6 @@ public class Isaac extends Character{
 						for(int i = 0; i < rock.size(); i++) {
 							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() + 5 && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH - 5
 								&& getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT > rock.get(i).getYStructure() && getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
-								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
 								isRockCollision = true;
 								break;
 							}
@@ -255,7 +252,6 @@ public class Isaac extends Character{
 						for(int i = 0; i < rock.size(); i++) {
 							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() + 5 && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH - 10
 								&& getYChar() > rock.get(i).getYStructure() - 20 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 10) {
-								System.out.println(getXChar() + IsaacSize.BODYWIDTH);
 								isRockCollision = true;
 								break;
 							}

@@ -8,6 +8,7 @@ import lombok.Data;
 import objectSize.BulletSize;
 import objectSize.Gap;
 import objectSize.ViewDirect;
+import structure.Rock;
 
 @Data
 
@@ -16,12 +17,13 @@ public class BulletControl {
 	
 	private JFrame app;
 	private Vector<Bullet> bullets = new Vector<Bullet>();
+	private Vector<Rock> rock;
 	private boolean delayBullet = false;
 	private boolean isAttacking = false;
 	
-	public BulletControl(JFrame app) {
+	public BulletControl(JFrame app, Vector<Rock> rock) {
 		this.app = app;
-		
+		this.rock = rock;
 	}
 	
 	public void addBullet(String gubun, double attackDamage, int direct, int xBullet, int yBullet) {
@@ -68,6 +70,8 @@ public class BulletControl {
 									}
 									bullets.get(i).setCollide(true);
 								}
+								// 바위 충돌 검사.
+								
 								// 충돌이 아니면 계속 그림
 								if(!bullets.get(i).isCollide()) {
 									if(bullets.get(i).getDirect() == ViewDirect.DOWN) {
@@ -124,7 +128,7 @@ public class BulletControl {
 					
 					bullet.getSsBullet().setXPos(x);
 					bullet.getSsBullet().setYPos(y);
-					bullet.getSsBullet().drawObject(bullet.getXBullet()-20, bullet.getYBullet()-20);
+					bullet.getSsBullet().drawObject(bullet.getXBullet() - 20, bullet.getYBullet() - 20);
 					try {
 						Thread.sleep(50);
 					} catch (InterruptedException e) {
@@ -138,7 +142,6 @@ public class BulletControl {
 		}).start();
 
 	}
-	
 	// 구현되야 하는 것들
 	// 몹 충돌
 	// 구조물 충돌

@@ -38,13 +38,11 @@ public class IsaacApp extends JFrame {
 		rock.add(new Rock(app, 125, 115));
 		rock.add(new Rock(app, 740, 115));
 		rock.add(new Rock(app, 785, 160));
-		rock.add(new Rock(app, 375, 275));
 		// center 바위
 		rock.add(new Rock(app, 425, 225));
 		rock.add(new Rock(app, 475, 225));
 		rock.add(new Rock(app, 425, 275));
 		rock.add(new Rock(app, 475, 275));
-		rock.add(new Rock(app, 525, 275));
 		rock.add(new Rock(app, 425, 325));
 		rock.add(new Rock(app, 475, 325));
 
