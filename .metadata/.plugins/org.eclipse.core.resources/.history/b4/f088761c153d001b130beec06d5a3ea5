@@ -1,0 +1,29 @@
+package monster;
+
+import java.util.Vector;
+
+import javax.swing.JFrame;
+
+import character.Isaac;
+import objectSize.ViewDirect;
+import structure.Rock;
+
+public class Worm extends Monster {
+	private final static String GUBUN = "Worm : ";
+
+	public Worm(JFrame app, Isaac isaac, Vector<Rock> rock, String url, int imgWidth, int imgHeight) {
+		super(app, isaac, rock, url, imgWidth, imgHeight);
+	}
+	public void setting() {
+		setViewDirect(ViewDirect.RIGHT);
+		setXChar(180);
+		setYChar(130);	
+		setLife(10);
+		setAttackDamge(1);
+	}
+	public void batch() {
+		ssBody.drawObject(getXChar(), getYChar());
+		getApp().add(getMonster(), 0);
+	}
+	
+}

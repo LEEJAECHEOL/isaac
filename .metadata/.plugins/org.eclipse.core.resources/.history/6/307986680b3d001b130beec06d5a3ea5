@@ -1,0 +1,20 @@
+package monster;
+
+import javax.swing.JFrame;
+
+import SpriteSheet.SpriteSheet;
+import character.Character;
+import character.Isaac;
+
+public class Monster extends Character{
+	private final static String TAG = "Monster : ";
+	
+	private Isaac isaac;
+	private SpriteSheet monster;
+	
+
+	public Monster(JFrame app) {
+		super(app);
+	}
+
+}

@@ -17,7 +17,7 @@ public class Structure {
 	private int xStructure, yStructure;
 	
 	public Structure(JFrame app,String url, String gubun, int xStructure, int yStructure) {
-		System.out.println(TAG + "만들어짐");
+//		System.out.println(TAG + "만들어짐");
 		this.app = app;
 		this.ssStructure = new SpriteSheet(url, gubun, 0, 0, StructureSize.WIDTH, StructureSize.HEIGHT);
 		this.xStructure = xStructure;

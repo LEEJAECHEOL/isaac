@@ -20,6 +20,8 @@ public class Character {
 	private int xChar, yChar;	// 캐릭터 위치
 	private boolean dead;
 	private BulletControl bulletControl;	// bullet 제어
+	private boolean moveStart = false;
+	private boolean isAttacking = false;
 	
 	
 	public Character(JFrame app) {
@@ -30,14 +32,14 @@ public class Character {
 		isLeft = false;
 		dead = false;
 	}
-	
+	public void isDeadCheck() {}
 	public void moveRight() {}
 	public void moveLeft() {}
 	public void moveUp() {}
 	public void moveDown() {}
 	public void dead() {}
 	public void attack() {}
-	
+	public void moveMotion() {}
 	
 	
 	

@@ -1,0 +1,37 @@
+package monster;
+
+import java.util.Vector;
+
+import javax.swing.JFrame;
+
+import SpriteSheet.SpriteSheet;
+import bullet.BulletControl;
+import character.Isaac;
+import objectSize.ViewDirect;
+import structure.Rock;
+
+public class Stone extends Monster {
+
+	private Monster stone = this;
+	
+	public Stone(JFrame app, Isaac isaac, Vector<Rock> rock, String url, int imgWidth, int imgHeight) {
+		super(app, isaac, rock, url, imgWidth, imgHeight);
+	}
+
+	public void init() {
+		setMonster(new SpriteSheet(getUrl(), "monster", 0, 0, getImgWidth(), getImgHeight())); 
+	}
+	public void setting() {
+		setViewDirect(ViewDirect.DOWN);
+		setXChar(690);
+		setYChar(115);	
+		setLife(20);
+		setAttackDamge(1);
+		setBulletControl(new BulletControl(getApp(), getRock(), getIsaac(), null));
+	}
+	public void batch() {
+		getMonster().drawObject(getXChar(), getYChar());
+		getApp().add(getMonster(), 0);
+		stone.getBulletControl().addBullet("monster", getAttackDamge(), getViewDirect(), getXChar(), getYChar());
+	}
+}

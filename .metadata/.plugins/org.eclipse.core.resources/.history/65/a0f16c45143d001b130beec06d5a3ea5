@@ -1,0 +1,10 @@
+package monster;
+
+import character.Worm;
+
+public class Worm extends Monster {
+	private Worm worm = this;
+	private final static String GUBUN = "Worm : ";
+	
+	
+}

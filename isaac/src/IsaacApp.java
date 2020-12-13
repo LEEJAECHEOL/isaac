@@ -1,15 +1,16 @@
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.LinkedList;
 import java.util.Vector;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 import character.Isaac;
-import character.Worm;
 import map.Background;
+import monster.Monster;
+import monster.Stone;
+import monster.Worm;
+import objectSize.StoneSize;
+import objectSize.WormSize;
 import structure.Rock;
 import structure.Spike;
 
@@ -19,7 +20,7 @@ public class IsaacApp extends JFrame {
 	private Isaac isaac;	// player
 	private Vector<Rock> rock;
 	private Vector<Spike> spike;
-	private Worm worm;	// Worm
+	private Vector<Monster> monster;
 	
 	public IsaacApp() {
 		init();
@@ -34,8 +35,11 @@ public class IsaacApp extends JFrame {
 		bg = new Background(app);
 		rock = new Vector<Rock>();
 		spike = new Vector<Spike>();
+		monster = new Vector<Monster>();
+		
 		// 구석자리 바위
 		rock.add(new Rock(app, 125, 115));
+		rock.add(new Rock(app, 640, 115));
 		rock.add(new Rock(app, 740, 115));
 		rock.add(new Rock(app, 785, 160));
 		// center 바위
@@ -45,6 +49,7 @@ public class IsaacApp extends JFrame {
 		rock.add(new Rock(app, 475, 275));
 		rock.add(new Rock(app, 425, 325));
 		rock.add(new Rock(app, 475, 325));
+		
 
 		spike.add(new Spike(app, 125, 165));
 		spike.add(new Spike(app, 130, 445));
@@ -53,8 +58,9 @@ public class IsaacApp extends JFrame {
 		spike.add(new Spike(app, 675, 325));
 		
 		
-		isaac = new Isaac(app, rock, spike);
-		worm = new Worm(app, isaac, rock);
+		isaac = new Isaac(app, rock, spike, monster);
+		monster.add(new Worm(app, isaac, rock, "monster/worm.png", WormSize.WIDTH, WormSize.HEIGHT));
+		monster.add(new Stone(app, isaac, rock, "monster/stone.png", StoneSize.WIDTH, StoneSize.HEIGHT));
 		
 	}
 	

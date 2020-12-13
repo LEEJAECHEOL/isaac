@@ -1,0 +1,16 @@
+package monster;
+
+import java.util.Vector;
+
+import javax.swing.JFrame;
+
+import character.Isaac;
+import structure.Rock;
+
+public class Stone extends Monster {
+
+	public Stone(JFrame app, Isaac isaac, Vector<Rock> rock, String url, int imgWidth, int imgHeight) {
+		super(app, isaac, rock, url, imgWidth, imgHeight);
+	}
+
+}

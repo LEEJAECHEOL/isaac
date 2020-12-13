@@ -18,9 +18,6 @@
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="objectSize.Gap"/>
-    <fullyQualifiedTypeName name="objectSize.BulletSize"/>
-    <fullyQualifiedTypeName name="structure.Rock"/>
-    <fullyQualifiedTypeName name="java.util.Vector"/>
     <fullyQualifiedTypeName name="structure.Structure"/>
     <fullyQualifiedTypeName name="structure.Spike"/>
     <fullyQualifiedTypeName name="objectSize.StructureSize"/>
@@ -28,10 +25,13 @@
     <fullyQualifiedTypeName name="SpriteSheet.SpriteSheet"/>
     <fullyQualifiedTypeName name="character.Worm"/>
     <fullyQualifiedTypeName name="character.Isaac"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="objectSize.WormSize"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
     <fullyQualifiedTypeName name="objectSize.IsaacSize"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="objectSize.WormSize"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="structure.Rock"/>
     <fullyQualifiedTypeName name="objectSize.ViewDirect"/>
+    <fullyQualifiedTypeName name="objectSize.BulletSize"/>
 </qualifiedTypeNameHistroy>

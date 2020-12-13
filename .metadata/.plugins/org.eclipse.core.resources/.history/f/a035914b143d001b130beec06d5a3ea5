@@ -1,0 +1,20 @@
+package monster;
+
+import java.util.Vector;
+
+import javax.swing.JFrame;
+
+import character.Isaac;
+import character.Worm;
+import structure.Rock;
+
+public class Worm extends Monster {
+	private Worm worm = this;
+	private final static String GUBUN = "Worm : ";
+
+	public Worm(JFrame app, Isaac isaac, Vector<Rock> rock, String url, int imgWidth, int imgHeight) {
+		super(app, isaac, rock, url, imgWidth, imgHeight);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

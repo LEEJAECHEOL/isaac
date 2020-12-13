@@ -16,7 +16,7 @@ public class Bullet {
 	private boolean isCollide, isPop;
 	
 	public Bullet(String gubun, double attackDamage, int direct, int xBullet, int yBullet) {
-		System.out.println(TAG+ gubun + " bullet 생성");
+//		System.out.println(TAG+ gubun + " bullet 생성");
 		this.gubun = gubun;
 		String url = null;
 		if(gubun == "isaac") {
