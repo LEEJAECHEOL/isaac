@@ -4,13 +4,19 @@ import java.util.Vector;
 
 import javax.swing.JFrame;
 
+import SpriteSheet.SpriteSheet;
 import character.Isaac;
+import item.Item;
+import item.Key;
 import map.Background;
 import monster.Monster;
 import monster.Stone;
 import monster.Worm;
+import objectSize.DoorSize;
+import objectSize.KeySize;
 import objectSize.StoneSize;
 import objectSize.WormSize;
+import structure.Door;
 import structure.Rock;
 import structure.Spike;
 
@@ -21,6 +27,8 @@ public class IsaacApp extends JFrame {
 	private Vector<Rock> rock;
 	private Vector<Spike> spike;
 	private Vector<Monster> monster;
+	private Vector<Door> door;
+	private Vector<Item> items;
 	
 	public IsaacApp() {
 		init();
@@ -36,6 +44,8 @@ public class IsaacApp extends JFrame {
 		rock = new Vector<Rock>();
 		spike = new Vector<Spike>();
 		monster = new Vector<Monster>();
+		door = new Vector<Door>();
+		items = new Vector<Item>();
 		
 		// 구석자리 바위
 		rock.add(new Rock(app, 125, 115));
@@ -58,10 +68,14 @@ public class IsaacApp extends JFrame {
 		spike.add(new Spike(app, 675, 325));
 		
 		
-		isaac = new Isaac(app, rock, spike, monster);
+		items.add(new Key(app, "item/key.png", "key", 790, 450, KeySize.WIDTH, KeySize.HEIGHT ));
+		
+		isaac = new Isaac(app, rock, spike, monster, items);
 		monster.add(new Worm(app, isaac, rock, "monster/worm.png", WormSize.WIDTH, WormSize.HEIGHT));
 		monster.add(new Stone(app, isaac, rock, "monster/stone.png", StoneSize.WIDTH, StoneSize.HEIGHT));
-		
+		door.add(new Door(app,new SpriteSheet("structure/Door.png", "door", 0, 0, DoorSize.WIDTH, DoorSize.HEIGHT),"North", 420, 40));
+		door.add(new Door(app,new SpriteSheet("structure/Door.png", "door", 279, 0, DoorSize.WIDTH, DoorSize.HEIGHT),"West", 50, 260));
+
 	}
 	
 	public void setting() {

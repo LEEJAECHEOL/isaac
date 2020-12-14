@@ -2,6 +2,8 @@ package character;
 
 
 
+import java.awt.Color;
+import java.awt.Font;
 import java.util.Vector;
 
 import javax.swing.JFrame;
@@ -9,6 +11,7 @@ import javax.swing.JLabel;
 
 import SpriteSheet.SpriteSheet;
 import bullet.BulletControl;
+import item.Item;
 import lombok.Data;
 import monster.Monster;
 import objectSize.Gap;
@@ -27,29 +30,40 @@ public class Isaac extends Character{
 	private Isaac isaac = this;
 	private Vector<SpriteSheet> ssLifes;
 	private SpriteSheet ssHead, ssBody;
+	private SpriteSheet ssTotal;	// 전신
 	private Vector<Rock> rock;
 	private Vector<Spike> spike;
 	private int xPlusBody = 7, yPlusBody = 30;
 	private boolean isOnSpike = false;
+	private Vector<Item> items;
+	private int keyCount = 0;
+	private int bombCount = 0;
+	private JLabel laKey;
+	private JLabel laBomb;
+	private int YtotalSize; // 아이작 전신 시작위치 Y
 	
-	
-	public Isaac(JFrame app, Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster) {
+	public Isaac(JFrame app, Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items) {
 		super(app);
 		System.out.println(TAG + "make Isaac");
-		init(rock, spike, monster);
+		init(rock, spike, monster, items);
 		setting();
 		batch();
 	}
-	public void init(Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster) {
+	public void init(Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items) {
+		YtotalSize = IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 4 + Gap.ROWGAP * 5;
 		ssHead = new SpriteSheet("isaac/isaac.png", "isaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
 		ssBody = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
+		ssTotal = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, YtotalSize, IsaacSize.TOTALWIDTH, IsaacSize.TOTALHEIGHT);
 		this.rock = rock;
 		this.spike = spike;
+		this.items = items;
 		setBulletControl(new BulletControl(getApp(), rock, isaac, monster));
 		ssLifes = new Vector<SpriteSheet>();
 		for(int i = 0; i < 5; i++) {
 			this.ssLifes.add(new SpriteSheet("isaac/life.png", "life", 0, 0, LifeSize.WIDTH, LifeSize.HEIGHT));
 		}
+		laKey = new JLabel(Integer.toString(keyCount));
+		laBomb = new JLabel(Integer.toString(bombCount));
 	}
 	public void setting() {
 		setViewDirect(ViewDirect.DOWN);
@@ -63,6 +77,14 @@ public class Isaac extends Character{
 		for(int i = 0; i < 5; i++) {
 			ssLifes.get(i).drawObject(10 + (i * 30), 10);
 		}
+		laKey.setSize(20, 20);
+		laKey.setLocation(60, 50);
+		laKey.setFont(new Font("바탕", Font.ITALIC, 25));
+		laKey.setForeground(Color.WHITE);
+		laBomb.setSize(20, 20);
+		laBomb.setLocation(60, 93);
+		laBomb.setFont(new Font("바탕", Font.ITALIC, 25));
+		laBomb.setForeground(Color.WHITE);
 	}
 	public void batch() {
 		getApp().add(ssHead, 0);	// 머리 배치
@@ -70,6 +92,8 @@ public class Isaac extends Character{
 		for(int i = 0; i < 5; i++) {
 			getApp().add(ssLifes.get(i), 1);
 		}
+		getApp().add(laKey);
+		getApp().add(laBomb);
 	}
 	
 	@Override
@@ -103,6 +127,7 @@ public class Isaac extends Character{
 							break;
 						}
 						// 바위 충돌 검사. 끝
+						getItem();
 						// spike 밟을 떄
 						for(int i = 0; i < spike.size(); i++) {
 							if(getXChar() + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + IsaacSize.BODYWIDTH <  spike.get(i).getXStructure() + StructureSize.WIDTH 
@@ -156,6 +181,7 @@ public class Isaac extends Character{
 							break;
 						}
 						// 바위 충돌 검사. 끝
+						getItem();
 						// spike 밟을 떄
 						for(int i = 0; i < spike.size(); i++) {
 							if(getXChar() + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + xPlusBody <  spike.get(i).getXStructure() + StructureSize.WIDTH 
@@ -209,6 +235,7 @@ public class Isaac extends Character{
 							break;
 						}
 						// 바위 충돌 검사. 끝
+						getItem();
 						// spike밟을 때
 						for(int i = 0; i < spike.size(); i++) {
 							if(getXChar() + xPlusBody + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + xPlusBody <  spike.get(i).getXStructure() + StructureSize.WIDTH 
@@ -261,6 +288,7 @@ public class Isaac extends Character{
 							break;
 						}
 						// 바위 충돌 검사. 끝
+						getItem();
 						// spike밟을 때
 						for(int i = 0; i < spike.size(); i++) {
 							if(getXChar() + xPlusBody + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + xPlusBody <  spike.get(i).getXStructure() + StructureSize.WIDTH 
@@ -452,6 +480,53 @@ public class Isaac extends Character{
 				}
 			}
 		}).start();
+	}
+	public void getItem() {
+		for(int i = 0; i < items.size(); i++) {
+			if(items.get(i).isDrop()) {
+				if(getXChar() + IsaacSize.HEADWIDTH - xPlusBody > items.get(i).getXItem() && getXChar() < items.get(i).getXItem() + items.get(i).getWidth()
+					&& getYChar() + IsaacSize.HEADHEIGHT + yPlusBody > items.get(i).getYItem() && getYChar() < items.get(i).getYItem() + items.get(i).getHeight()) {
+					
+					items.get(i).setDrop(false);
+					keyCount += 1;
+					laKey.setText(Integer.toString(keyCount));
+					getItemMotion(items.get(i));
+				}
+			}
+			
+		}
+	}
+	public void getItemMotion(Item item) {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				getApp().remove(ssHead);
+				getApp().remove(ssBody);
+				int col = 2;
+				for(int i = 0; i < 2; i++) {
+					col += i;
+					item.getSsItem().drawObject(getXChar() + 15, getYChar() - 10);
+					ssTotal.setXPos(IsaacSize.TOTALWIDTH * col + Gap.COLUMNGAP * col);
+					ssTotal.drawObject(getXChar(), getYChar());
+					getApp().add(ssTotal);
+					getApp().repaint();
+					try {
+						Thread.sleep(200);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				getApp().remove(item.getSsItem());
+				getApp().remove(ssTotal);
+				getApp().repaint();
+				getApp().add(ssHead, 0);	// 머리 배치
+				getApp().add(ssBody, 1);	// 몸 배치
+			}
+		}).start();
+		
+	}
+	public void hurtMotion() {
+		
 	}
 }
 

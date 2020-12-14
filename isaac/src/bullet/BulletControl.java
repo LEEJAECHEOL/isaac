@@ -93,7 +93,7 @@ public class BulletControl {
 									for(int j = 0; j < monster.size(); j++) {
 										if(!monster.get(j).isDead()) {
 											if(bullets.get(i).getXBullet() + BulletSize.WIDTH > monster.get(j).getXChar() && bullets.get(i).getXBullet() < monster.get(j).getXChar() + monster.get(j).getImgWidth()
-													&& bullets.get(i).getYBullet() + BulletSize.HEIGHT > monster.get(j).getYChar() && bullets.get(i).getYBullet() < monster.get(j).getYChar() + monster.get(j).getImgHeight()) {
+													&& bullets.get(i).getYBullet() + BulletSize.HEIGHT > monster.get(j).getYChar() && bullets.get(i).getYBullet() < monster.get(j).getYChar() + monster.get(j).getImgHeight() - 10) {
 													if(!bullets.get(i).isCollide()) {
 														collisionBulletCount++;
 														monster.get(j).setLife(monster.get(j).getLife() - 1); // 생명력 감소
