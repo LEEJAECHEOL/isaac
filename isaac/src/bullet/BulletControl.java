@@ -12,6 +12,7 @@ import objectSize.IsaacSize;
 import objectSize.StructureSize;
 import objectSize.ViewDirect;
 import structure.Rock;
+import structure.Structure;
 
 @Data
 
@@ -20,16 +21,16 @@ public class BulletControl {
 
 	private Vector<Bullet> bullets = new Vector<Bullet>();
 	private JFrame app;
-	private Vector<Rock> rock;
+	private Vector<Structure> structures;
 	private boolean delayBullet = false;
 	private boolean isAttacking = false;
 	
 	private Isaac isaac;
 	private Vector<Monster> monster;
 	
-	public BulletControl(JFrame app, Vector<Rock> rock, Isaac isaac, Vector<Monster> monster) {
+	public BulletControl(JFrame app, Vector<Structure> structures, Isaac isaac, Vector<Monster> monster) {
 		this.app = app;
-		this.rock = rock;
+		this.structures = structures;
 		this.isaac = isaac;
 		this.monster = monster;
 	}
@@ -72,28 +73,39 @@ public class BulletControl {
 						if(bullets.size() != 0) {
 							for (int i = 0; i < bullets.size(); i++) {
 								// 벽 충돌 검사
-								if(bullets.get(i).getXBullet() < 110 || bullets.get(i).getXBullet() > 835 || bullets.get(i).getYBullet() < 90 || bullets.get(i).getYBullet() > 500) {
+								if(bullets.get(i).getXBullet() < 110 || 
+									bullets.get(i).getXBullet() > 835 || 
+									bullets.get(i).getYBullet() < 90 || 
+									bullets.get(i).getYBullet() > 500) {
+									
 									if(!bullets.get(i).isCollide()) {
 										collisionBulletCount++;
 									}
 									bullets.get(i).setCollide(true);
 								}
 								// 바위 충돌 검사.
-								for(int j = 0; j < rock.size(); j++) {
-									if(bullets.get(i).getXBullet() + BulletSize.WIDTH > rock.get(j).getXStructure() && bullets.get(i).getXBullet() < rock.get(j).getXStructure() + StructureSize.WIDTH 
-										&& bullets.get(i).getYBullet() + BulletSize.HEIGHT > rock.get(j).getYStructure() && bullets.get(i).getYBullet() < rock.get(j).getYStructure() + StructureSize.HEIGHT) {
-										if(!bullets.get(i).isCollide()) {
-											collisionBulletCount++;
-										}
-										bullets.get(i).setCollide(true);
+								for(int j = 0; j < structures.size(); j++) {
+									if(!structures.get(j).isBroken() && structures.get(j).getSsStructure().getGubun() == "rock") {
+										if(bullets.get(i).getXBullet() + BulletSize.WIDTH > structures.get(j).getXStructure() && 
+											bullets.get(i).getXBullet() < structures.get(j).getXStructure() + StructureSize.WIDTH && 
+											bullets.get(i).getYBullet() + BulletSize.HEIGHT > structures.get(j).getYStructure() && 
+											bullets.get(i).getYBullet() < structures.get(j).getYStructure() + StructureSize.HEIGHT) {
+												if(!bullets.get(i).isCollide()) {
+													collisionBulletCount++;
+												}
+												bullets.get(i).setCollide(true);
+											}
 									}
+									
 								}
 								// 몹 or 플레이어 충돌
 								if(bullets.get(i).getGubun() == "isaac"){
 									for(int j = 0; j < monster.size(); j++) {
 										if(!monster.get(j).isDead()) {
-											if(bullets.get(i).getXBullet() + BulletSize.WIDTH > monster.get(j).getXChar() && bullets.get(i).getXBullet() < monster.get(j).getXChar() + monster.get(j).getImgWidth()
-													&& bullets.get(i).getYBullet() + BulletSize.HEIGHT > monster.get(j).getYChar() && bullets.get(i).getYBullet() < monster.get(j).getYChar() + monster.get(j).getImgHeight() - 10) {
+											if(bullets.get(i).getXBullet() + BulletSize.WIDTH > monster.get(j).getXChar() && 
+												bullets.get(i).getXBullet() < monster.get(j).getXChar() + monster.get(j).getImgWidth()&& 
+												bullets.get(i).getYBullet() + BulletSize.HEIGHT > monster.get(j).getYChar() && 
+												bullets.get(i).getYBullet() < monster.get(j).getYChar() + monster.get(j).getImgHeight() - 10) {
 													if(!bullets.get(i).isCollide()) {
 														collisionBulletCount++;
 														monster.get(j).setLife(monster.get(j).getLife() - 1); // 생명력 감소
@@ -104,8 +116,10 @@ public class BulletControl {
 										}
 									}
 								}else {
-									if(bullets.get(i).getXBullet() + BulletSize.WIDTH > isaac.getXChar() && bullets.get(i).getXBullet() < isaac.getXChar() + IsaacSize.HEADWIDTH
-											&& bullets.get(i).getYBullet() + BulletSize.HEIGHT > isaac.getYChar() && bullets.get(i).getYBullet() < isaac.getYChar() + IsaacSize.HEADHEIGHT) {
+									if(bullets.get(i).getXBullet() + BulletSize.WIDTH > isaac.getXChar() && 
+										bullets.get(i).getXBullet() < isaac.getXChar() + IsaacSize.HEADWIDTH && 
+										bullets.get(i).getYBullet() + BulletSize.HEIGHT > isaac.getYChar() && 
+										bullets.get(i).getYBullet() < isaac.getYChar() + IsaacSize.HEADHEIGHT) {
 											if(!bullets.get(i).isCollide()) {
 												collisionBulletCount++;
 												isaac.setLife(isaac.getLife() - 1); // 생명력 감소
@@ -167,13 +181,9 @@ public class BulletControl {
 				bullet.getSsBullet().setYPos(21);
 				bullet.getSsBullet().setWidth(BulletSize.POPWIDTH);
 				bullet.getSsBullet().setHeight(BulletSize.POPHEIGHT);
-				int rowCount = 0;
 				for(int i = 0; i < 12; i ++) {
-					if(i % 4 == 0 && i > 0) {
-						rowCount += 1;
-					}
 					int x = BulletSize.POPWIDTH * (i % 4) + Gap.COLUMNGAP * (i % 4);
-					int y = (BulletSize.HEIGHT + Gap.ROWGAP) + (BulletSize.POPHEIGHT * rowCount)  + (Gap.ROWGAP * rowCount);
+					int y = (BulletSize.HEIGHT + Gap.ROWGAP) + (BulletSize.POPHEIGHT * (i / 4))  + (Gap.ROWGAP * (i / 4));
 					
 					bullet.getSsBullet().setXPos(x);
 					bullet.getSsBullet().setYPos(y);

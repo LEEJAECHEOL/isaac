@@ -11,54 +11,70 @@ import javax.swing.JLabel;
 
 import SpriteSheet.SpriteSheet;
 import bullet.BulletControl;
+import item.Bomb;
 import item.Item;
 import lombok.Data;
 import monster.Monster;
+import objectSize.BombSize;
+import objectSize.DoorSize;
+import objectSize.ExplosionSize;
 import objectSize.Gap;
 import objectSize.IsaacSize;
 import objectSize.LifeSize;
 import objectSize.StructureSize;
 import objectSize.ViewDirect;
+import structure.Door;
 import structure.Rock;
 import structure.Spike;
+import structure.Structure;
 
 @Data
 
 public class Isaac extends Character{
-
+	
 	private final static String TAG = "Isaac : ";
 	private Isaac isaac = this;
+	
 	private Vector<SpriteSheet> ssLifes;
 	private SpriteSheet ssHead, ssBody;
 	private SpriteSheet ssTotal;	// 전신
-	private Vector<Rock> rock;
-	private Vector<Spike> spike;
-	private int xPlusBody = 7, yPlusBody = 30;
-	private boolean isOnSpike = false;
+	private SpriteSheet ssBomb;
+	private SpriteSheet ssExplosion;
+
+	private Vector<Structure> structures;
+	private Vector<Monster> monster;
+	private Vector<Door> door;
 	private Vector<Item> items;
-	private int keyCount = 0;
-	private int bombCount = 0;
+	
+	private int xPlusBody = 7, yPlusBody = 30;
+	private int yTotalSize; // 아이작 전신 시작위치 Y
+	private boolean isOnSpike = false;
 	private JLabel laKey;
 	private JLabel laBomb;
-	private int YtotalSize; // 아이작 전신 시작위치 Y
+	private int keyCount = 0;
+	private int bombCount = 0;
+	private int moveSpeed = 12;
+	private boolean isBomb = false;
 	
-	public Isaac(JFrame app, Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items) {
+	public Isaac(JFrame app, Vector<Structure> structures, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
 		super(app);
 		System.out.println(TAG + "make Isaac");
-		init(rock, spike, monster, items);
+		init(structures, monster, items, door);
 		setting();
 		batch();
 	}
-	public void init(Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items) {
-		YtotalSize = IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 4 + Gap.ROWGAP * 5;
+	public void init(Vector<Structure> structures, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
 		ssHead = new SpriteSheet("isaac/isaac.png", "isaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
 		ssBody = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
-		ssTotal = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, YtotalSize, IsaacSize.TOTALWIDTH, IsaacSize.TOTALHEIGHT);
-		this.rock = rock;
-		this.spike = spike;
-		this.items = items;
-		setBulletControl(new BulletControl(getApp(), rock, isaac, monster));
+		ssTotal = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, yTotalSize, IsaacSize.TOTALWIDTH, IsaacSize.TOTALHEIGHT);
+		ssBomb = new SpriteSheet("item/bomb.png", "bomb", 0, BombSize.PICKHEIGHT + Gap.ROWGAP, BombSize.SETBOMBWIDTH, BombSize.SETBOMBHEIGHT);
+		ssExplosion = new SpriteSheet("item/explosion.png", "explosion", 0, 0, ExplosionSize.WIDTH, ExplosionSize.HEIGHT);
+		yTotalSize = IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 4 + Gap.ROWGAP * 5;
 		ssLifes = new Vector<SpriteSheet>();
+		this.monster = monster;
+		this.door = door;
+		this.structures = structures;
+		this.items = items;
 		for(int i = 0; i < 5; i++) {
 			this.ssLifes.add(new SpriteSheet("isaac/life.png", "life", 0, 0, LifeSize.WIDTH, LifeSize.HEIGHT));
 		}
@@ -66,12 +82,15 @@ public class Isaac extends Character{
 		laBomb = new JLabel(Integer.toString(bombCount));
 	}
 	public void setting() {
+		setBulletControl(new BulletControl(getApp(), structures, isaac, monster));
 		setViewDirect(ViewDirect.DOWN);
 		setXChar(480);	// 아이작 초반 x위치 480 설정
 		setYChar(430);	// 아이작 초반 y위치 430 설정
 		setAttackDamge(1);	// 아이작 공격력 1 세팅
 		setLife(5);	//	생명력 6 설정
 		setMaxLife(5);	//	최대 생명력 6설정
+		setXCenter(getXChar() + IsaacSize.HEADWIDTH / 2);
+		setYCenter(getYChar() + IsaacSize.HEADHEIGHT);
 		ssHead.drawObject(getXChar(), getYChar());	// 아이작 머리 위치 설정
 		ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);	//아이작 몸 위치 설정
 		for(int i = 0; i < 5; i++) {
@@ -114,11 +133,13 @@ public class Isaac extends Character{
 						}
 						boolean isRockCollision = false;
 						// 바위 충돌 검사.
-						for(int i = 0; i < rock.size(); i++) {
-							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() && getXChar() + IsaacSize.HEADWIDTH < rock.get(i).getXStructure() + StructureSize.WIDTH 
-								&& getYChar() + IsaacSize.HEADHEIGHT > rock.get(i).getYStructure() - 10 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 20) {
-								isRockCollision = true;
-								break;
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
+								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() && getXCenter() < structures.get(i).getXStructure() + StructureSize.WIDTH 
+									&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > structures.get(i).getYStructure() && getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+									isRockCollision = true;
+									break;
+								}
 							}
 						}
 						if(isRockCollision) {
@@ -129,17 +150,21 @@ public class Isaac extends Character{
 						// 바위 충돌 검사. 끝
 						getItem();
 						// spike 밟을 떄
-						for(int i = 0; i < spike.size(); i++) {
-							if(getXChar() + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + IsaacSize.BODYWIDTH <  spike.get(i).getXStructure() + StructureSize.WIDTH 
-									&& getYChar() + IsaacSize.HEADHEIGHT > spike.get(i).getYStructure() && getYChar() + IsaacSize.HEADHEIGHT < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
-								getSpikeDamage();
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "spike") {
+								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() && 
+										getXCenter() < structures.get(i).getXStructure() + StructureSize.WIDTH && 
+										getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > structures.get(i).getYStructure() && 
+										getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+									getSpikeDamage();
+								}
 							}
 						}
-						
-						setXChar(getXChar() + 1);
+						setXChar(getXChar() + 1);	
+						setXCenter(getXCenter() + 1);
 						moveMotion();
 						try {
-							Thread.sleep(12);
+							Thread.sleep(moveSpeed);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -168,11 +193,15 @@ public class Isaac extends Character{
 						}
 						boolean isRockCollision = false;
 						// 바위 충돌 검사.
-						for(int i = 0; i < rock.size(); i++) {
-							if(getXChar() > rock.get(i).getXStructure() && getXChar()< rock.get(i).getXStructure() + StructureSize.WIDTH 
-								&& getYChar() + IsaacSize.HEADHEIGHT > rock.get(i).getYStructure() - 10 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 20) {
-								isRockCollision = true;
-								break;
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
+								if(getXCenter() > structures.get(i).getXStructure() && 
+									getXCenter() - (IsaacSize.HEADWIDTH / 2) < structures.get(i).getXStructure() + StructureSize.WIDTH && 
+									getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > structures.get(i).getYStructure() && 
+									getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+									isRockCollision = true;
+									break;
+								}
 							}
 						}
 						if(isRockCollision) {
@@ -183,16 +212,22 @@ public class Isaac extends Character{
 						// 바위 충돌 검사. 끝
 						getItem();
 						// spike 밟을 떄
-						for(int i = 0; i < spike.size(); i++) {
-							if(getXChar() + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + xPlusBody <  spike.get(i).getXStructure() + StructureSize.WIDTH 
-									&& getYChar() + IsaacSize.HEADHEIGHT > spike.get(i).getYStructure() && getYChar() + IsaacSize.HEADHEIGHT < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
-								getSpikeDamage();
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "spike") {
+								if(getXCenter() > structures.get(i).getXStructure() && 
+									getXCenter() - (IsaacSize.HEADWIDTH / 2) < structures.get(i).getXStructure() + StructureSize.WIDTH && 
+									getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > structures.get(i).getYStructure() && 
+									getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+									getSpikeDamage();
+								}
 							}
 						}
+								
 						setXChar(getXChar() - 1);
+						setXCenter(getXCenter() - 1);
 						moveMotion();
 						try {
-							Thread.sleep(12);
+							Thread.sleep(moveSpeed);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -222,11 +257,15 @@ public class Isaac extends Character{
 						}
 						boolean isRockCollision = false;
 						// 바위 충돌 검사.
-						for(int i = 0; i < rock.size(); i++) {
-							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() + 5 && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH - 5
-								&& getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT > rock.get(i).getYStructure() && getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
-								isRockCollision = true;
-								break;
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
+								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() + 5 && 
+									getXCenter() - (IsaacSize.HEADWIDTH / 2) < structures.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+									getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > structures.get(i).getYStructure() && 
+									getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+									isRockCollision = true;
+									break;
+								}
 							}
 						}
 						if(isRockCollision) {
@@ -237,16 +276,21 @@ public class Isaac extends Character{
 						// 바위 충돌 검사. 끝
 						getItem();
 						// spike밟을 때
-						for(int i = 0; i < spike.size(); i++) {
-							if(getXChar() + xPlusBody + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + xPlusBody <  spike.get(i).getXStructure() + StructureSize.WIDTH 
-									&& getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT > spike.get(i).getYStructure() && getYChar() + IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
-								getSpikeDamage();
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "spike") {
+								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() + 5 && 
+									getXCenter() - (IsaacSize.HEADWIDTH / 2) < structures.get(i).getXStructure() + StructureSize.WIDTH - 5&& 
+									getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > structures.get(i).getYStructure() && 
+									getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+									getSpikeDamage();
+								}
 							}
 						}
 						setYChar(getYChar() + 1);
+						setYCenter(getYCenter() + 1);
 						moveMotion();
 						try {
-							Thread.sleep(12);
+							Thread.sleep(moveSpeed);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -275,11 +319,15 @@ public class Isaac extends Character{
 						}
 						boolean isRockCollision = false;
 						// 바위 충돌 검사.
-						for(int i = 0; i < rock.size(); i++) {
-							if(getXChar() + IsaacSize.HEADWIDTH > rock.get(i).getXStructure() + 5 && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH - 10
-								&& getYChar() > rock.get(i).getYStructure() - 20 && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT - 10) {
-								isRockCollision = true;
-								break;
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
+								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() + 5 && 
+									getXCenter() - (IsaacSize.HEADWIDTH / 2) < structures.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+									getYCenter()> structures.get(i).getYStructure() && 
+									getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < structures.get(i).getYStructure() + StructureSize.HEIGHT ) {
+									isRockCollision = true;
+									break;
+								}
 							}
 						}
 						if(isRockCollision) {
@@ -290,16 +338,21 @@ public class Isaac extends Character{
 						// 바위 충돌 검사. 끝
 						getItem();
 						// spike밟을 때
-						for(int i = 0; i < spike.size(); i++) {
-							if(getXChar() + xPlusBody + IsaacSize.BODYWIDTH >  spike.get(i).getXStructure() && getXChar() + xPlusBody <  spike.get(i).getXStructure() + StructureSize.WIDTH 
-									&& getYChar() + IsaacSize.HEADHEIGHT> spike.get(i).getYStructure() && getYChar() + IsaacSize.HEADHEIGHT  < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
-								getSpikeDamage();
+						for(int i = 0; i < structures.size(); i++) {
+							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "spike") {
+								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() + 5 && 
+									getXCenter() - (IsaacSize.HEADWIDTH / 2) < structures.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+									getYCenter()> structures.get(i).getYStructure() && 
+									getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < structures.get(i).getYStructure() + StructureSize.HEIGHT ) {
+									getSpikeDamage();
+								}
 							}
 						}
 						setYChar(getYChar() - 1);
+						setYCenter(getYCenter() - 1);
 						moveMotion();
 						try {
-							Thread.sleep(12);
+							Thread.sleep(moveSpeed);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -481,15 +534,87 @@ public class Isaac extends Character{
 			}
 		}).start();
 	}
+	public void useBomb() {
+		if(bombCount != 0) {
+			bombCount -= 1;
+			laBomb.setText(Integer.toString(bombCount));
+			if(isBomb == false) {
+				isBomb = true;
+				bombMotion();
+			}
+		}
+	}
+	public void bombMotion() {
+		if(isBomb) {
+			new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					int x = getXCenter() - 20;
+					int y = getYCenter() - 20;
+					getApp().add(ssBomb);
+					for(int i = 0; i < 6; i++) {
+						ssBomb.setXPos(BombSize.SETBOMBWIDTH * i + Gap.COLUMNGAP * i);
+						ssBomb.drawObject(x, y);
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					getApp().remove(ssBomb);
+					getApp().repaint();
+					getApp().add(ssExplosion);
+					x -= 20;
+					y -= 45;
+					int xBombCenter = x + BombSize.SETBOMBWIDTH / 2;
+					int yBombCenter = y  + BombSize.SETBOMBHEIGHT / 2;
+					for(int i = 0; i < structures.size(); i++) {
+						if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
+							int xDistance = (structures.get(i).getXStructure() - xBombCenter);
+							int yDistance = (structures.get(i).getYStructure() - yBombCenter);
+							double distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+							System.out.println(distance);
+							if(distance < 40) {
+								structures.get(i).setBroken(true);
+								getApp().remove(structures.get(i).getSsStructure());
+								getApp().repaint();
+							}
+						}
+					}
+					for(int i = 0; i < 12; i++) {
+						ssExplosion.setXPos(ExplosionSize.WIDTH * (i % 4) + Gap.COLUMNGAP * (i % 4));
+						ssExplosion.setYPos(ExplosionSize.HEIGHT * (i / 4) + Gap.COLUMNGAP * (i / 4));
+						ssExplosion.drawObject(x, y);
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					getApp().remove(ssExplosion);
+					
+				}
+			}).start();
+			
+			isBomb = false;
+		}
+	}
 	public void getItem() {
 		for(int i = 0; i < items.size(); i++) {
 			if(items.get(i).isDrop()) {
-				if(getXChar() + IsaacSize.HEADWIDTH - xPlusBody > items.get(i).getXItem() && getXChar() < items.get(i).getXItem() + items.get(i).getWidth()
-					&& getYChar() + IsaacSize.HEADHEIGHT + yPlusBody > items.get(i).getYItem() && getYChar() < items.get(i).getYItem() + items.get(i).getHeight()) {
-					
+				if(getXCenter() > items.get(i).getXItem() && 
+					getXCenter() < items.get(i).getXItem() + items.get(i).getSsItem().getWidth() && 
+					getYCenter() + IsaacSize.HEADHEIGHT + yPlusBody > items.get(i).getYItem() && 
+					getYCenter() < items.get(i).getYItem() + items.get(i).getSsItem().getHeight()) {
 					items.get(i).setDrop(false);
-					keyCount += 1;
-					laKey.setText(Integer.toString(keyCount));
+					if(items.get(i).getSsItem().getGubun() == "key") {
+						keyCount += 1;
+						laKey.setText(Integer.toString(keyCount));
+					}else if(items.get(i).getSsItem().getGubun() == "bomb") {
+						bombCount += 1;
+						laBomb.setText(Integer.toString(bombCount));
+					}
 					getItemMotion(items.get(i));
 				}
 			}
@@ -507,6 +632,7 @@ public class Isaac extends Character{
 					col += i;
 					item.getSsItem().drawObject(getXChar() + 15, getYChar() - 10);
 					ssTotal.setXPos(IsaacSize.TOTALWIDTH * col + Gap.COLUMNGAP * col);
+					ssTotal.setYPos(yTotalSize);
 					ssTotal.drawObject(getXChar(), getYChar());
 					getApp().add(ssTotal);
 					getApp().repaint();
@@ -525,9 +651,29 @@ public class Isaac extends Character{
 		}).start();
 		
 	}
-	public void hurtMotion() {
-		
+	public void dead() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isaac.getLife() == 0) {
+					getApp().remove(ssHead);
+					getApp().remove(ssBody);
+					ssTotal.setYPos(yTotalSize + Gap.ROWGAP + IsaacSize.TOTALHEIGHT);
+					for(int i = 0; i < 3; i++) {
+						ssTotal.setXPos(IsaacSize.TOTALWIDTH * i + Gap.COLUMNGAP * i);
+						ssTotal.drawObject(getXChar(), getYChar());
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					isaac.setDead(true);
+				}
+			}
+		}).start();
 	}
+	
 }
 
 

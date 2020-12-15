@@ -16,6 +16,7 @@ import objectSize.StructureSize;
 import objectSize.ViewDirect;
 import objectSize.WormSize;
 import structure.Rock;
+import structure.Structure;
 
 @Data
 
@@ -28,12 +29,12 @@ public class Monster extends Character{
 	private String url;
 	private int imgWidth, imgHeight;
 	
-	private Vector<Rock> rock;
+	private Vector<Structure> structures;
 
-	public Monster(JFrame app, Isaac isaac, Vector<Rock> rock, String url, int imgWidth, int imgHeight) {
+	public Monster(JFrame app, Isaac isaac, Vector<Structure> structures, String url, int imgWidth, int imgHeight) {
 		super(app);
 		this.isaac = isaac;
-		this.rock = rock;
+		this.structures = structures;
 		this.imgWidth = imgWidth;
 		this.imgHeight = imgHeight;
 		this.url = url;
@@ -77,26 +78,28 @@ public class Monster extends Character{
 		}
 	}
 	public void collisionRock() {
-		for(int i = 0; i < rock.size(); i++) {
-			// 오른쪽으로 이동중일 때 
-			if(getXChar() + getImgWidth() > rock.get(i).getXStructure() && getXChar() + getImgWidth() < rock.get(i).getXStructure() + StructureSize.WIDTH 
-				&& getYChar() + getImgHeight() > rock.get(i).getYStructure() && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
-				setRight(false);
-			}
-			// 왼쪽으로 이동중일때
-			if(getXChar() > rock.get(i).getXStructure() && getXChar()< rock.get(i).getXStructure() + StructureSize.WIDTH 
-				&& getYChar() + getImgHeight() > rock.get(i).getYStructure() && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
-				setLeft(false);
-			}
-			// 아래쪽으로 이동중 일때
-			if(getXChar() + getImgWidth() > rock.get(i).getXStructure() && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH 
-				&& getYChar() + getImgHeight() > rock.get(i).getYStructure() && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
-				setDown(false);
-			}
-			// 위쪽으로 이동중 일때
-			if(getXChar() + getImgWidth() > rock.get(i).getXStructure() && getXChar() < rock.get(i).getXStructure() + StructureSize.WIDTH 
-				&& getYChar() > rock.get(i).getYStructure() && getYChar() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
-				setUp(false);
+		for(int i = 0; i < structures.size(); i++) {
+			if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
+				// 오른쪽으로 이동중일 때 
+				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && getXChar() + getImgWidth() < structures.get(i).getXStructure() + StructureSize.WIDTH 
+					&& getYChar() + getImgHeight() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+					setRight(false);
+				}
+				// 왼쪽으로 이동중일때
+				if(getXChar() > structures.get(i).getXStructure() && getXChar()< structures.get(i).getXStructure() + StructureSize.WIDTH 
+					&& getYChar() + getImgHeight() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+					setLeft(false);
+				}
+				// 아래쪽으로 이동중 일때
+				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && getXChar() < structures.get(i).getXStructure() + StructureSize.WIDTH 
+					&& getYChar() + getImgHeight() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+					setDown(false);
+				}
+				// 위쪽으로 이동중 일때
+				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && getXChar() < structures.get(i).getXStructure() + StructureSize.WIDTH 
+					&& getYChar() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+					setUp(false);
+				}
 			}
 		}
 	}

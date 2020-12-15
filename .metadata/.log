@@ -8400,3 +8400,3582 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-14 16:37:36.094
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2020-12-14 16:37:37.355
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Isaac(JFrame, Vector<Rock>, Vector<Spike>, Vector<Monster>, Vector<Item>) [in Isaac [in [Working copy] Isaac.java [in character [in src [in isaac]]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:616)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.SourceRefElement.getSourceRange(SourceRefElement.java:233)
+	at org.eclipse.jdt.internal.core.Member.getJavadocRange(Member.java:301)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContentFromSource(JavadocContentAccess2.java:639)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:515)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:748)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.lambda$0(LSJavaHoverProvider.java:68)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1800)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1792)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2020-12-14 16:37:37.356
+!MESSAGE Isaac(JFrame, Vector<Rock>, Vector<Spike>, Vector<Monster>, Vector<Item>) [in Isaac [in [Working copy] Isaac.java [in character [in src [in isaac]]]]] does not exist
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-14 16:44:34.694
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-14 16:48:40.979
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:09:24.086
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bzKClDiY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:09:24.087
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.bzKClDiY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:09:24.087
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:09:24.087
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bzKClDiY => OK
+!SESSION 2020-12-14 18:09:50.221 -----------------------------------------------
+eclipse.buildId=4.8.1.202010230733
+java.version=15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -data /Users/lee/Desktop/isaac -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.add.import'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.organize.imports'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.872
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.open.hierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:09:51.873
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+
+!ENTRY org.eclipse.jface 2 0 2020-12-14 18:09:53.305
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-12-14 18:09:53.305
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@32050628,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18d14de3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:00.266
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:00.267
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4db65fac[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=668)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:00.268
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:00.288
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.465
+!MESSAGE Boot LS startup time from start to initialized: 6191ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.566
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.arxomJWxisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.568
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.570
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.570
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.570
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.arxomJWx => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.571
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.573
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.573
+!MESSAGE buffering callback sts4.classpath.arxomJWx isaac false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.573
+!MESSAGE executing callback sts4.classpath.arxomJWx 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:10:06.587
+!MESSAGE executing callback sts4.classpath.arxomJWx SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2020-12-14 18:13:04.125
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2020-12-14 18:49:18.710 -----------------------------------------------
+eclipse.buildId=4.8.1.202010230733
+java.version=15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2020-12-14 18:49:22.179
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.179
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.add.import'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.organize.imports'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.open.hierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.180
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.181
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.181
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.181
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.181
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-14 18:49:22.181
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+
+!ENTRY org.eclipse.jface 2 0 2020-12-14 18:49:23.171
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-12-14 18:49:23.171
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c8e096,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3dabdd11,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:30.204
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:30.204
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@be694c0[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=668)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:30.205
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:30.224
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-14 18:49:35.448
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.479
+!MESSAGE Boot LS startup time from start to initialized: 6268ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-12-14 18:49:36.591
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2063)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.lambda$12(LSPTextHover.java:199)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.lambda$11(LSPTextHover.java:208)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$2(LanguageServerWrapper.java:250)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.595
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.JGJnrIxyisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.597
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.598
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.599
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.599
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.JGJnrIxy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.599
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.601
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.601
+!MESSAGE buffering callback sts4.classpath.JGJnrIxy isaac false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.602
+!MESSAGE executing callback sts4.classpath.JGJnrIxy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:49:36.615
+!MESSAGE executing callback sts4.classpath.JGJnrIxy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:51:27.070
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.JGJnrIxy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:51:27.071
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.JGJnrIxy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:51:27.071
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-14 18:51:27.071
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.JGJnrIxy => OK
+
+!ENTRY org.eclipse.ui 2 2 2020-12-14 18:51:27.291
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2020-12-15 09:00:49.199 -----------------------------------------------
+eclipse.buildId=4.8.1.202010230733
+java.version=15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.add.import'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.organize.imports'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.open.hierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 09:00:54.028
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+
+!ENTRY org.eclipse.jface 2 0 2020-12-15 09:00:55.277
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-12-15 09:00:55.277
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@431923ed,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@44723d95,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:03.069
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:03.069
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6aa909cb[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=668)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:03.072
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:03.099
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.773
+!MESSAGE Boot LS startup time from start to initialized: 6693ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.933
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.clfbNvhzisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.936
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.937
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.938
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.938
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.clfbNvhz => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.938
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.940
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.940
+!MESSAGE buffering callback sts4.classpath.clfbNvhz isaac false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.940
+!MESSAGE executing callback sts4.classpath.clfbNvhz 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:01:09.954
+!MESSAGE executing callback sts4.classpath.clfbNvhz SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 09:03:21.599
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 09:06:56.002
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1950)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2085)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:23:48.487
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.clfbNvhz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:23:48.487
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.clfbNvhz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:23:48.488
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 09:23:48.488
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.clfbNvhz => OK
+
+!ENTRY org.eclipse.ui 2 2 2020-12-15 09:23:48.622
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2020-12-15 14:19:20.475 -----------------------------------------------
+eclipse.buildId=4.8.1.202010230733
+java.version=15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -data /Users/lee/Desktop/isaac -product org.springframework.boot.ide.branding.sts4 -keyring /Users/lee/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2020-12-15 14:19:22.585
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.585
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.585
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.585
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.585
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.next'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.previous'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.select.last'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.source.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.add.import'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.organize.imports'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.refactor.quickMenu'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.rename.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.move.element'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.modify.method.parameters'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.inline'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.586
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.method'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.extract.local.variable'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.edit.text.java.open.hierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.TypeHierarchy'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.PackageExplorer'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.SourceView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-12-15 14:19:22.587
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.wst.jsdt.ui', id='org.eclipse.wst.jsdt.ui.JavadocView'
+
+!ENTRY org.eclipse.jface 2 0 2020-12-15 14:19:24.575
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-12-15 14:19:24.575
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3d01b609,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38b7004d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:32.270
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:32.270
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6824c2e6[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=668)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:32.272
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:32.295
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.736
+!MESSAGE Boot LS startup time from start to initialized: 6458ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.909
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.CEQmjsWcisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.912
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.913
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.913
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.913
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.CEQmjsWc => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.914
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.915
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.916
+!MESSAGE buffering callback sts4.classpath.CEQmjsWc isaac false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.916
+!MESSAGE executing callback sts4.classpath.CEQmjsWc 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-15 14:19:38.929
+!MESSAGE executing callback sts4.classpath.CEQmjsWc SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2020-12-15 14:30:31.244
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 14:52:18.051
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 14:56:39.924
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 15:12:17.927
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 15:49:14.864
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 16:09:38.297
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 16:35:22.237
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2020-12-15 16:35:25.821
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for png {key=Lsun/net/www/content/image/png;} [in png.class [in sun.net.www.content.image [in /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/rt.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:84)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:1023)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:519)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:748)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.lambda$0(LSJavaHoverProvider.java:68)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1800)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1792)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2020-12-15 16:35:25.821
+!MESSAGE Unknown javadoc format for png {key=Lsun/net/www/content/image/png;} [in png.class [in sun.net.www.content.image [in /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/rt.jar]]]
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 16:35:51.006
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:03:32.725
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2020-12-15 17:09:49.105
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package character;
+
+
+
+import java.awt.Color;
+import java.awt.Font;
+import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import SpriteSheet.SpriteSheet;
+import bullet.BulletControl;
+import item.Bomb;
+import item.Item;
+import lombok.Data;
+import monster.Monster;
+import objectSize.BombSize;
+import objectSize.DoorSize;
+import objectSize.ExplosionSize;
+import objectSize.Gap;
+import objectSize.IsaacSize;
+import objectSize.LifeSize;
+import objectSize.StructureSize;
+import objectSize.ViewDirect;
+import structure.Door;
+import structure.Rock;
+import structure.Spike;
+
+@Data
+
+public class Isaac extends Character{
+	
+	private final static String TAG = "Isaac : ";
+	private Isaac isaac = this;
+	
+	private Vector<SpriteSheet> ssLifes;
+	private SpriteSheet ssHead, ssBody;
+	private SpriteSheet ssTotal;	// 전신
+	private SpriteSheet ssBomb;
+	private SpriteSheet ssExplosion;
+	
+	private Vector<Monster> monster;
+	private Vector<Rock> rock;
+	private Vector<Spike> spike;
+	private Vector<Door> door;
+	private Vector<Item> items;
+	
+	private int xPlusBody = 7, yPlusBody = 30;
+	private int yTotalSize; // 아이작 전신 시작위치 Y
+	private boolean isOnSpike = false;
+	private JLabel laKey;
+	private JLabel laBomb;
+	private int keyCount = 0;
+	private int bombCount = 0;
+	private int moveSpeed = 12;
+	private boolean isBomb = false;
+	
+	public Isaac(JFrame app, Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
+		super(app);
+		System.out.println(TAG + "make Isaac");
+		init(rock, spike, monster, items, door);
+		setting();
+		batch();
+	}
+	public void init(Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
+		ssHead = new SpriteSheet("isaac/isaac.png", "isaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
+		ssBody = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
+		ssTotal = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, yTotalSize, IsaacSize.TOTALWIDTH, IsaacSize.TOTALHEIGHT);
+		ssBomb = new SpriteSheet("item/bomb.png", "bomb", 0, BombSize.PICKHEIGHT + Gap.ROWGAP, BombSize.SETBOMBWIDTH, BombSize.SETBOMBHEIGHT);
+		ssExplosion = new SpriteSheet("item/explosion.png", "explosion", 0, 0, ExplosionSize.WIDTH, ExplosionSize.HEIGHT);
+		yTotalSize = IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 4 + Gap.ROWGAP * 5;
+		ssLifes = new Vector<SpriteSheet>();
+		this.monster = monster;
+		this.door = door;
+		this.rock = rock;
+		this.spike = spike;
+		this.items = items;
+		for(int i = 0; i < 5; i++) {
+			this.ssLifes.add(new SpriteSheet("isaac/life.png", "life", 0, 0, LifeSize.WIDTH, LifeSize.HEIGHT));
+		}
+		laKey = new JLabel(Integer.toString(keyCount));
+		laBomb = new JLabel(Integer.toString(bombCount));
+	}
+	public void setting() {
+		setBulletControl(new BulletControl(getApp(), rock, isaac, monster));
+		setViewDirect(ViewDirect.DOWN);
+		setXChar(480);	// 아이작 초반 x위치 480 설정
+		setYChar(430);	// 아이작 초반 y위치 430 설정
+		setAttackDamge(1);	// 아이작 공격력 1 세팅
+		setLife(5);	//	생명력 6 설정
+		setMaxLife(5);	//	최대 생명력 6설정
+		setXCenter(getXChar() + IsaacSize.HEADWIDTH / 2);
+		setYCenter(getYChar() + IsaacSize.HEADHEIGHT);
+		ssHead.drawObject(getXChar(), getYChar());	// 아이작 머리 위치 설정
+		ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);	//아이작 몸 위치 설정
+		for(int i = 0; i < 5; i++) {
+			ssLifes.get(i).drawObject(10 + (i * 30), 10);
+		}
+		laKey.setSize(20, 20);
+		laKey.setLocation(60, 50);
+		laKey.setFont(new Font("바탕", Font.ITALIC, 25));
+		laKey.setForeground(Color.WHITE);
+		laBomb.setSize(20, 20);
+		laBomb.setLocation(60, 93);
+		laBomb.setFont(new Font("바탕", Font.ITALIC, 25));
+		laBomb.setForeground(Color.WHITE);
+	}
+	public void batch() {
+		getApp().add(ssHead, 0);	// 머리 배치
+		getApp().add(ssBody, 1);	// 몸 배치
+		for(int i = 0; i < 5; i++) {
+			getApp().add(ssLifes.get(i), 1);
+		}
+		getApp().add(laKey);
+		getApp().add(laBomb);
+	}
+	
+	@Override
+	public void moveRight() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isRight() == false) {
+//					System.out.println(TAG + "오른쪽으로 움직임");
+					setRight(true);
+					setViewDirect(ViewDirect.RIGHT);
+					while(isRight()) {
+						// 벽 충돌 검사
+						if(getXChar() + IsaacSize.BODYWIDTH > 810) {
+							setRight(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() && getXCenter() < rock.get(i).getXStructure() + StructureSize.WIDTH 
+								&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > rock.get(i).getYStructure() && getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setRight(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike 밟을 떄
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() && getXCenter() < spike.get(i).getXStructure() + StructureSize.WIDTH 
+									&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > spike.get(i).getYStructure() && getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setXChar(getXChar() + 1);	
+						setXCenter(getXCenter() + 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveLeft() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isLeft() == false) {
+//					System.out.println(TAG + "왼쪽으로 움직임");
+					setLeft(true);
+					setViewDirect(ViewDirect.LEFT);
+					while(isLeft()) {
+						if(getXChar() < 130) {
+							setLeft(false);	
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() > rock.get(i).getXStructure() && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH && 
+								getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > rock.get(i).getYStructure() && 
+								getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setLeft(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike 밟을 떄
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() > spike.get(i).getXStructure() && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH && 
+								getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > spike.get(i).getYStructure() && 
+								getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setXChar(getXChar() - 1);
+						setXCenter(getXCenter() - 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	
+	@Override
+	public void moveDown() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isDown() == false) {
+//					System.out.println(TAG + "아래쪽으로 움직임");
+					setDown(true);
+					setViewDirect(ViewDirect.DOWN);
+					while(isDown()) {
+						if(getYChar() > 440) {
+							setDown(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > rock.get(i).getYStructure() && 
+								getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike밟을 때
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH - 5&& 
+								getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > spike.get(i).getYStructure() && 
+								getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setYChar(getYChar() + 1);
+						setYCenter(getYCenter() + 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveUp() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isUp() == false) {
+//					System.out.println(TAG + "위쪽으로 움직임");
+					setUp(true);
+					setViewDirect(ViewDirect.UP);
+					while(isUp()) {
+						if(getYChar() < 100) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter()> rock.get(i).getYStructure() && 
+								getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < rock.get(i).getYStructure() + StructureSize.HEIGHT ) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike밟을 때
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter()> spike.get(i).getYStructure() && 
+								getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < spike.get(i).getYStructure() + StructureSize.HEIGHT ) {
+								getSpikeDamage();
+							}
+						}
+						setYChar(getYChar() - 1);
+						setYCenter(getYCenter() - 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveMotion() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				int motion = 0;
+				if(isMoveStart() == false) {
+					setMoveStart(true);
+					while(!isDead()) {
+						if(isDown() && getViewDirect() == ViewDirect.DOWN) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.DOWN) {
+								ssHead.setXPos(0);
+								ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isLeft() && getViewDirect() == ViewDirect.LEFT) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.LEFT) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
+								ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 2 + Gap.ROWGAP * 3);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isUp() && getViewDirect() == ViewDirect.UP) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.UP) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
+								ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isRight() && getViewDirect() == ViewDirect.RIGHT) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.RIGHT) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);	// 머리 이미지 x좌표
+								ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT + Gap.ROWGAP * 2);	// 몸 이미지 y좌표
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						
+						try {
+							Thread.sleep(40);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+						
+					}
+				}
+			}
+		}).start();
+	}
+	public void refreshDirect() {
+		if(isaac.isDown()) {
+			isaac.setViewDirect(ViewDirect.DOWN);
+		}
+		if(isaac.isLeft()) {
+			isaac.setViewDirect(ViewDirect.LEFT);
+		}
+		if(isaac.isUp()) {
+			isaac.setViewDirect(ViewDirect.UP);
+		}
+		if(isaac.isRight()) {
+			isaac.setViewDirect(ViewDirect.RIGHT);
+		}
+	}
+	@Override
+	public void attack() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+					closeEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					try {
+						Thread.sleep(300);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					openEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					isaac.getBulletControl().addBullet("isaac", isaac.getAttackDamge(), isaac.getViewDirect(), isaac.getXChar(), isaac.getYChar());
+			}
+		}).start();
+	}
+	
+	public void closeEye(int viewDirect) {
+		switch (viewDirect) {
+		case 1:	// 보는 방향 아래
+			ssHead.setXPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+			break;
+		case 2:	// 보는 방향 왼쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 7 + Gap.COLUMNGAP * 7);
+			break;
+		case 3:	// 보는 방향 위
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 5 + Gap.COLUMNGAP * 5);
+			break;
+		case 4:	// 보는 방향 오른쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 3 + Gap.COLUMNGAP * 3);
+			break;
+		}
+	}
+	public void openEye(int viewDirect) {
+		switch (viewDirect) {
+		case 1:	// 보는 방향 아래
+			ssHead.setXPos(0);
+			break;
+		case 2:	// 보는 방향 왼쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
+			break;
+		case 3:	// 보는 방향 위
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
+			break;
+		case 4:	// 보는 방향 오른쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);
+			break;
+		}
+	}
+	public void reDrawLife() {
+		double currentLife = getLife();
+		for(int i = 0; i < 5; i++) {
+			if(currentLife >= 1) {
+				ssLifes.get(i).setXPos(0);
+				currentLife -= 1;
+			} else if(currentLife > 0 && currentLife < 1) {
+				ssLifes.get(i).setXPos(LifeSize.WIDTH + Gap.COLUMNGAP);
+				currentLife -= 0.5;
+			} else {
+				ssLifes.get(i).setXPos(LifeSize.WIDTH * 2 + Gap.COLUMNGAP * 2);
+			}
+		}
+		for(int i = 0; i < 5; i++) {
+			ssLifes.get(i).drawObject(10 + (i * 30), 10);
+		}
+	}
+	public void getSpikeDamage() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isOnSpike == false) {
+					isOnSpike = true;
+					isaac.setLife(getIsaac().getLife() - 0.5);
+					isaac.reDrawLife();
+					
+					try {
+						Thread.sleep(3000);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					isOnSpike = false;
+				}
+			}
+		}).start();
+	}
+	public void useBomb() {
+		if(bombCount != 0) {
+			bombCount -= 1;
+			laBomb.setText(Integer.toString(bombCount));
+			if(isBomb == false) {
+				isBomb = true;
+				bombMotion();
+			}
+		}
+	}
+	public void bombMotion() {
+		if(isBomb) {
+			new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					int x = getXCenter() - 20;
+					int y = getYCenter() - 20;
+					getApp().add(ssBomb);
+					for(int i = 0; i < 6; i++) {
+						ssBomb.setXPos(BombSize.SETBOMBWIDTH * i + Gap.COLUMNGAP * i);
+						ssBomb.drawObject(x, y);
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					getApp().remove(ssBomb);
+					getApp().repaint();
+					getApp().add(ssExplosion);
+					x -= 20;
+					y -= 45;
+					for(int i = 0; i < 12; i++) {
+						ssExplosion.setXPos(ExplosionSize.WIDTH * (i % 4) + Gap.COLUMNGAP * (i % 4));
+						ssExplosion.setYPos(ExplosionSize.HEIGHT * (i / 4) + Gap.COLUMNGAP * (i / 4));
+						ssExplosion.drawObject(x, y);
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					for(int i = 0; i < rock.size(); i++) {
+						int distance =Math.pow(a, b)(rock.get(i).getXStructure() - x)
+					}
+					getApp().remove(ssExplosion);
+					
+				}
+			}).start();
+			
+			isBomb = false;
+		}
+	}
+	public void getItem() {
+		for(int i = 0; i < items.size(); i++) {
+			if(items.get(i).isDrop()) {
+				if(getXCenter() > items.get(i).getXItem() && 
+					getXCenter() < items.get(i).getXItem() + items.get(i).getSsItem().getWidth() && 
+					getYCenter() + IsaacSize.HEADHEIGHT + yPlusBody > items.get(i).getYItem() && 
+					getYCenter() < items.get(i).getYItem() + items.get(i).getSsItem().getHeight()) {
+					items.get(i).setDrop(false);
+					if(items.get(i).getSsItem().getGubun() == "key") {
+						keyCount += 1;
+						laKey.setText(Integer.toString(keyCount));
+					}else if(items.get(i).getSsItem().getGubun() == "bomb") {
+						bombCount += 1;
+						laBomb.setText(Integer.toString(bombCount));
+					}
+					getItemMotion(items.get(i));
+				}
+			}
+			
+		}
+	}
+	public void getItemMotion(Item item) {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				getApp().remove(ssHead);
+				getApp().remove(ssBody);
+				int col = 2;
+				for(int i = 0; i < 2; i++) {
+					col += i;
+					item.getSsItem().drawObject(getXChar() + 15, getYChar() - 10);
+					ssTotal.setXPos(IsaacSize.TOTALWIDTH * col + Gap.COLUMNGAP * col);
+					ssTotal.setYPos(yTotalSize);
+					ssTotal.drawObject(getXChar(), getYChar());
+					getApp().add(ssTotal);
+					getApp().repaint();
+					try {
+						Thread.sleep(200);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				getApp().remove(item.getSsItem());
+				getApp().remove(ssTotal);
+				getApp().repaint();
+				getApp().add(ssHead, 0);	// 머리 배치
+				getApp().add(ssBody, 1);	// 몸 배치
+			}
+		}).start();
+		
+	}
+	public void dead() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isaac.getLife() == 0) {
+					getApp().remove(ssHead);
+					getApp().remove(ssBody);
+					ssTotal.setYPos(yTotalSize + Gap.ROWGAP + IsaacSize.TOTALHEIGHT);
+					for(int i = 0; i < 3; i++) {
+						ssTotal.setXPos(IsaacSize.TOTALWIDTH * i + Gap.COLUMNGAP * i);
+						ssTotal.drawObject(getXChar(), getYChar());
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					isaac.setDead(true);
+				}
+			}
+		}).start();
+	}
+	
+}
+
+
+
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:167)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:152)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2020-12-15 17:09:49.106
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:167)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:152)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2020-12-15 17:09:49.107
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:167)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:152)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2020-12-15 17:09:50.049
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package character;
+
+
+
+import java.awt.Color;
+import java.awt.Font;
+import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import SpriteSheet.SpriteSheet;
+import bullet.BulletControl;
+import item.Bomb;
+import item.Item;
+import lombok.Data;
+import monster.Monster;
+import objectSize.BombSize;
+import objectSize.DoorSize;
+import objectSize.ExplosionSize;
+import objectSize.Gap;
+import objectSize.IsaacSize;
+import objectSize.LifeSize;
+import objectSize.StructureSize;
+import objectSize.ViewDirect;
+import structure.Door;
+import structure.Rock;
+import structure.Spike;
+
+@Data
+
+public class Isaac extends Character{
+	
+	private final static String TAG = "Isaac : ";
+	private Isaac isaac = this;
+	
+	private Vector<SpriteSheet> ssLifes;
+	private SpriteSheet ssHead, ssBody;
+	private SpriteSheet ssTotal;	// 전신
+	private SpriteSheet ssBomb;
+	private SpriteSheet ssExplosion;
+	
+	private Vector<Monster> monster;
+	private Vector<Rock> rock;
+	private Vector<Spike> spike;
+	private Vector<Door> door;
+	private Vector<Item> items;
+	
+	private int xPlusBody = 7, yPlusBody = 30;
+	private int yTotalSize; // 아이작 전신 시작위치 Y
+	private boolean isOnSpike = false;
+	private JLabel laKey;
+	private JLabel laBomb;
+	private int keyCount = 0;
+	private int bombCount = 0;
+	private int moveSpeed = 12;
+	private boolean isBomb = false;
+	
+	public Isaac(JFrame app, Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
+		super(app);
+		System.out.println(TAG + "make Isaac");
+		init(rock, spike, monster, items, door);
+		setting();
+		batch();
+	}
+	public void init(Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
+		ssHead = new SpriteSheet("isaac/isaac.png", "isaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
+		ssBody = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
+		ssTotal = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, yTotalSize, IsaacSize.TOTALWIDTH, IsaacSize.TOTALHEIGHT);
+		ssBomb = new SpriteSheet("item/bomb.png", "bomb", 0, BombSize.PICKHEIGHT + Gap.ROWGAP, BombSize.SETBOMBWIDTH, BombSize.SETBOMBHEIGHT);
+		ssExplosion = new SpriteSheet("item/explosion.png", "explosion", 0, 0, ExplosionSize.WIDTH, ExplosionSize.HEIGHT);
+		yTotalSize = IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 4 + Gap.ROWGAP * 5;
+		ssLifes = new Vector<SpriteSheet>();
+		this.monster = monster;
+		this.door = door;
+		this.rock = rock;
+		this.spike = spike;
+		this.items = items;
+		for(int i = 0; i < 5; i++) {
+			this.ssLifes.add(new SpriteSheet("isaac/life.png", "life", 0, 0, LifeSize.WIDTH, LifeSize.HEIGHT));
+		}
+		laKey = new JLabel(Integer.toString(keyCount));
+		laBomb = new JLabel(Integer.toString(bombCount));
+	}
+	public void setting() {
+		setBulletControl(new BulletControl(getApp(), rock, isaac, monster));
+		setViewDirect(ViewDirect.DOWN);
+		setXChar(480);	// 아이작 초반 x위치 480 설정
+		setYChar(430);	// 아이작 초반 y위치 430 설정
+		setAttackDamge(1);	// 아이작 공격력 1 세팅
+		setLife(5);	//	생명력 6 설정
+		setMaxLife(5);	//	최대 생명력 6설정
+		setXCenter(getXChar() + IsaacSize.HEADWIDTH / 2);
+		setYCenter(getYChar() + IsaacSize.HEADHEIGHT);
+		ssHead.drawObject(getXChar(), getYChar());	// 아이작 머리 위치 설정
+		ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);	//아이작 몸 위치 설정
+		for(int i = 0; i < 5; i++) {
+			ssLifes.get(i).drawObject(10 + (i * 30), 10);
+		}
+		laKey.setSize(20, 20);
+		laKey.setLocation(60, 50);
+		laKey.setFont(new Font("바탕", Font.ITALIC, 25));
+		laKey.setForeground(Color.WHITE);
+		laBomb.setSize(20, 20);
+		laBomb.setLocation(60, 93);
+		laBomb.setFont(new Font("바탕", Font.ITALIC, 25));
+		laBomb.setForeground(Color.WHITE);
+	}
+	public void batch() {
+		getApp().add(ssHead, 0);	// 머리 배치
+		getApp().add(ssBody, 1);	// 몸 배치
+		for(int i = 0; i < 5; i++) {
+			getApp().add(ssLifes.get(i), 1);
+		}
+		getApp().add(laKey);
+		getApp().add(laBomb);
+	}
+	
+	@Override
+	public void moveRight() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isRight() == false) {
+//					System.out.println(TAG + "오른쪽으로 움직임");
+					setRight(true);
+					setViewDirect(ViewDirect.RIGHT);
+					while(isRight()) {
+						// 벽 충돌 검사
+						if(getXChar() + IsaacSize.BODYWIDTH > 810) {
+							setRight(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() && getXCenter() < rock.get(i).getXStructure() + StructureSize.WIDTH 
+								&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > rock.get(i).getYStructure() && getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setRight(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike 밟을 떄
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() && getXCenter() < spike.get(i).getXStructure() + StructureSize.WIDTH 
+									&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > spike.get(i).getYStructure() && getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setXChar(getXChar() + 1);	
+						setXCenter(getXCenter() + 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveLeft() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isLeft() == false) {
+//					System.out.println(TAG + "왼쪽으로 움직임");
+					setLeft(true);
+					setViewDirect(ViewDirect.LEFT);
+					while(isLeft()) {
+						if(getXChar() < 130) {
+							setLeft(false);	
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() > rock.get(i).getXStructure() && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH && 
+								getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > rock.get(i).getYStructure() && 
+								getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setLeft(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike 밟을 떄
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() > spike.get(i).getXStructure() && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH && 
+								getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > spike.get(i).getYStructure() && 
+								getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setXChar(getXChar() - 1);
+						setXCenter(getXCenter() - 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	
+	@Override
+	public void moveDown() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isDown() == false) {
+//					System.out.println(TAG + "아래쪽으로 움직임");
+					setDown(true);
+					setViewDirect(ViewDirect.DOWN);
+					while(isDown()) {
+						if(getYChar() > 440) {
+							setDown(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > rock.get(i).getYStructure() && 
+								getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike밟을 때
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH - 5&& 
+								getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > spike.get(i).getYStructure() && 
+								getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setYChar(getYChar() + 1);
+						setYCenter(getYCenter() + 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveUp() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isUp() == false) {
+//					System.out.println(TAG + "위쪽으로 움직임");
+					setUp(true);
+					setViewDirect(ViewDirect.UP);
+					while(isUp()) {
+						if(getYChar() < 100) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter()> rock.get(i).getYStructure() && 
+								getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < rock.get(i).getYStructure() + StructureSize.HEIGHT ) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike밟을 때
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter()> spike.get(i).getYStructure() && 
+								getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < spike.get(i).getYStructure() + StructureSize.HEIGHT ) {
+								getSpikeDamage();
+							}
+						}
+						setYChar(getYChar() - 1);
+						setYCenter(getYCenter() - 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveMotion() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				int motion = 0;
+				if(isMoveStart() == false) {
+					setMoveStart(true);
+					while(!isDead()) {
+						if(isDown() && getViewDirect() == ViewDirect.DOWN) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.DOWN) {
+								ssHead.setXPos(0);
+								ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isLeft() && getViewDirect() == ViewDirect.LEFT) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.LEFT) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
+								ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 2 + Gap.ROWGAP * 3);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isUp() && getViewDirect() == ViewDirect.UP) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.UP) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
+								ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isRight() && getViewDirect() == ViewDirect.RIGHT) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.RIGHT) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);	// 머리 이미지 x좌표
+								ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT + Gap.ROWGAP * 2);	// 몸 이미지 y좌표
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						
+						try {
+							Thread.sleep(40);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+						
+					}
+				}
+			}
+		}).start();
+	}
+	public void refreshDirect() {
+		if(isaac.isDown()) {
+			isaac.setViewDirect(ViewDirect.DOWN);
+		}
+		if(isaac.isLeft()) {
+			isaac.setViewDirect(ViewDirect.LEFT);
+		}
+		if(isaac.isUp()) {
+			isaac.setViewDirect(ViewDirect.UP);
+		}
+		if(isaac.isRight()) {
+			isaac.setViewDirect(ViewDirect.RIGHT);
+		}
+	}
+	@Override
+	public void attack() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+					closeEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					try {
+						Thread.sleep(300);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					openEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					isaac.getBulletControl().addBullet("isaac", isaac.getAttackDamge(), isaac.getViewDirect(), isaac.getXChar(), isaac.getYChar());
+			}
+		}).start();
+	}
+	
+	public void closeEye(int viewDirect) {
+		switch (viewDirect) {
+		case 1:	// 보는 방향 아래
+			ssHead.setXPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+			break;
+		case 2:	// 보는 방향 왼쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 7 + Gap.COLUMNGAP * 7);
+			break;
+		case 3:	// 보는 방향 위
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 5 + Gap.COLUMNGAP * 5);
+			break;
+		case 4:	// 보는 방향 오른쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 3 + Gap.COLUMNGAP * 3);
+			break;
+		}
+	}
+	public void openEye(int viewDirect) {
+		switch (viewDirect) {
+		case 1:	// 보는 방향 아래
+			ssHead.setXPos(0);
+			break;
+		case 2:	// 보는 방향 왼쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
+			break;
+		case 3:	// 보는 방향 위
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
+			break;
+		case 4:	// 보는 방향 오른쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);
+			break;
+		}
+	}
+	public void reDrawLife() {
+		double currentLife = getLife();
+		for(int i = 0; i < 5; i++) {
+			if(currentLife >= 1) {
+				ssLifes.get(i).setXPos(0);
+				currentLife -= 1;
+			} else if(currentLife > 0 && currentLife < 1) {
+				ssLifes.get(i).setXPos(LifeSize.WIDTH + Gap.COLUMNGAP);
+				currentLife -= 0.5;
+			} else {
+				ssLifes.get(i).setXPos(LifeSize.WIDTH * 2 + Gap.COLUMNGAP * 2);
+			}
+		}
+		for(int i = 0; i < 5; i++) {
+			ssLifes.get(i).drawObject(10 + (i * 30), 10);
+		}
+	}
+	public void getSpikeDamage() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isOnSpike == false) {
+					isOnSpike = true;
+					isaac.setLife(getIsaac().getLife() - 0.5);
+					isaac.reDrawLife();
+					
+					try {
+						Thread.sleep(3000);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					isOnSpike = false;
+				}
+			}
+		}).start();
+	}
+	public void useBomb() {
+		if(bombCount != 0) {
+			bombCount -= 1;
+			laBomb.setText(Integer.toString(bombCount));
+			if(isBomb == false) {
+				isBomb = true;
+				bombMotion();
+			}
+		}
+	}
+	public void bombMotion() {
+		if(isBomb) {
+			new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					int x = getXCenter() - 20;
+					int y = getYCenter() - 20;
+					getApp().add(ssBomb);
+					for(int i = 0; i < 6; i++) {
+						ssBomb.setXPos(BombSize.SETBOMBWIDTH * i + Gap.COLUMNGAP * i);
+						ssBomb.drawObject(x, y);
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					getApp().remove(ssBomb);
+					getApp().repaint();
+					getApp().add(ssExplosion);
+					x -= 20;
+					y -= 45;
+					for(int i = 0; i < 12; i++) {
+						ssExplosion.setXPos(ExplosionSize.WIDTH * (i % 4) + Gap.COLUMNGAP * (i % 4));
+						ssExplosion.setYPos(ExplosionSize.HEIGHT * (i / 4) + Gap.COLUMNGAP * (i / 4));
+						ssExplosion.drawObject(x, y);
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					for(int i = 0; i < rock.size(); i++) {
+						int distance =Math.pow(a, b)(rock.get(i).getXStructure() - x)
+					}
+					getApp().remove(ssExplosion);
+					
+				}
+			}).start();
+			
+			isBomb = false;
+		}
+	}
+	public void getItem() {
+		for(int i = 0; i < items.size(); i++) {
+			if(items.get(i).isDrop()) {
+				if(getXCenter() > items.get(i).getXItem() && 
+					getXCenter() < items.get(i).getXItem() + items.get(i).getSsItem().getWidth() && 
+					getYCenter() + IsaacSize.HEADHEIGHT + yPlusBody > items.get(i).getYItem() && 
+					getYCenter() < items.get(i).getYItem() + items.get(i).getSsItem().getHeight()) {
+					items.get(i).setDrop(false);
+					if(items.get(i).getSsItem().getGubun() == "key") {
+						keyCount += 1;
+						laKey.setText(Integer.toString(keyCount));
+					}else if(items.get(i).getSsItem().getGubun() == "bomb") {
+						bombCount += 1;
+						laBomb.setText(Integer.toString(bombCount));
+					}
+					getItemMotion(items.get(i));
+				}
+			}
+			
+		}
+	}
+	public void getItemMotion(Item item) {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				getApp().remove(ssHead);
+				getApp().remove(ssBody);
+				int col = 2;
+				for(int i = 0; i < 2; i++) {
+					col += i;
+					item.getSsItem().drawObject(getXChar() + 15, getYChar() - 10);
+					ssTotal.setXPos(IsaacSize.TOTALWIDTH * col + Gap.COLUMNGAP * col);
+					ssTotal.setYPos(yTotalSize);
+					ssTotal.drawObject(getXChar(), getYChar());
+					getApp().add(ssTotal);
+					getApp().repaint();
+					try {
+						Thread.sleep(200);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				getApp().remove(item.getSsItem());
+				getApp().remove(ssTotal);
+				getApp().repaint();
+				getApp().add(ssHead, 0);	// 머리 배치
+				getApp().add(ssBody, 1);	// 몸 배치
+			}
+		}).start();
+		
+	}
+	public void dead() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isaac.getLife() == 0) {
+					getApp().remove(ssHead);
+					getApp().remove(ssBody);
+					ssTotal.setYPos(yTotalSize + Gap.ROWGAP + IsaacSize.TOTALHEIGHT);
+					for(int i = 0; i < 3; i++) {
+						ssTotal.setXPos(IsaacSize.TOTALWIDTH * i + Gap.COLUMNGAP * i);
+						ssTotal.drawObject(getXChar(), getYChar());
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					isaac.setDead(true);
+				}
+			}
+		}).start();
+	}
+	
+}
+
+
+
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:449)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2020-12-15 17:09:50.050
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:449)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2020-12-15 17:09:50.050
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:449)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2020-12-15 17:09:52.124
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package character;
+
+
+
+import java.awt.Color;
+import java.awt.Font;
+import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import SpriteSheet.SpriteSheet;
+import bullet.BulletControl;
+import item.Bomb;
+import item.Item;
+import lombok.Data;
+import monster.Monster;
+import objectSize.BombSize;
+import objectSize.DoorSize;
+import objectSize.ExplosionSize;
+import objectSize.Gap;
+import objectSize.IsaacSize;
+import objectSize.LifeSize;
+import objectSize.StructureSize;
+import objectSize.ViewDirect;
+import structure.Door;
+import structure.Rock;
+import structure.Spike;
+
+@Data
+
+public class Isaac extends Character{
+	
+	private final static String TAG = "Isaac : ";
+	private Isaac isaac = this;
+	
+	private Vector<SpriteSheet> ssLifes;
+	private SpriteSheet ssHead, ssBody;
+	private SpriteSheet ssTotal;	// 전신
+	private SpriteSheet ssBomb;
+	private SpriteSheet ssExplosion;
+	
+	private Vector<Monster> monster;
+	private Vector<Rock> rock;
+	private Vector<Spike> spike;
+	private Vector<Door> door;
+	private Vector<Item> items;
+	
+	private int xPlusBody = 7, yPlusBody = 30;
+	private int yTotalSize; // 아이작 전신 시작위치 Y
+	private boolean isOnSpike = false;
+	private JLabel laKey;
+	private JLabel laBomb;
+	private int keyCount = 0;
+	private int bombCount = 0;
+	private int moveSpeed = 12;
+	private boolean isBomb = false;
+	
+	public Isaac(JFrame app, Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
+		super(app);
+		System.out.println(TAG + "make Isaac");
+		init(rock, spike, monster, items, door);
+		setting();
+		batch();
+	}
+	public void init(Vector<Rock> rock, Vector<Spike> spike, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
+		ssHead = new SpriteSheet("isaac/isaac.png", "isaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
+		ssBody = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, (IsaacSize.HEADHEIGHT + Gap.ROWGAP), IsaacSize.BODYWIDTH, IsaacSize.BODYHEIGHT);
+		ssTotal = new SpriteSheet("isaac/isaac.png", "isaacBody", 0, yTotalSize, IsaacSize.TOTALWIDTH, IsaacSize.TOTALHEIGHT);
+		ssBomb = new SpriteSheet("item/bomb.png", "bomb", 0, BombSize.PICKHEIGHT + Gap.ROWGAP, BombSize.SETBOMBWIDTH, BombSize.SETBOMBHEIGHT);
+		ssExplosion = new SpriteSheet("item/explosion.png", "explosion", 0, 0, ExplosionSize.WIDTH, ExplosionSize.HEIGHT);
+		yTotalSize = IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 4 + Gap.ROWGAP * 5;
+		ssLifes = new Vector<SpriteSheet>();
+		this.monster = monster;
+		this.door = door;
+		this.rock = rock;
+		this.spike = spike;
+		this.items = items;
+		for(int i = 0; i < 5; i++) {
+			this.ssLifes.add(new SpriteSheet("isaac/life.png", "life", 0, 0, LifeSize.WIDTH, LifeSize.HEIGHT));
+		}
+		laKey = new JLabel(Integer.toString(keyCount));
+		laBomb = new JLabel(Integer.toString(bombCount));
+	}
+	public void setting() {
+		setBulletControl(new BulletControl(getApp(), rock, isaac, monster));
+		setViewDirect(ViewDirect.DOWN);
+		setXChar(480);	// 아이작 초반 x위치 480 설정
+		setYChar(430);	// 아이작 초반 y위치 430 설정
+		setAttackDamge(1);	// 아이작 공격력 1 세팅
+		setLife(5);	//	생명력 6 설정
+		setMaxLife(5);	//	최대 생명력 6설정
+		setXCenter(getXChar() + IsaacSize.HEADWIDTH / 2);
+		setYCenter(getYChar() + IsaacSize.HEADHEIGHT);
+		ssHead.drawObject(getXChar(), getYChar());	// 아이작 머리 위치 설정
+		ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);	//아이작 몸 위치 설정
+		for(int i = 0; i < 5; i++) {
+			ssLifes.get(i).drawObject(10 + (i * 30), 10);
+		}
+		laKey.setSize(20, 20);
+		laKey.setLocation(60, 50);
+		laKey.setFont(new Font("바탕", Font.ITALIC, 25));
+		laKey.setForeground(Color.WHITE);
+		laBomb.setSize(20, 20);
+		laBomb.setLocation(60, 93);
+		laBomb.setFont(new Font("바탕", Font.ITALIC, 25));
+		laBomb.setForeground(Color.WHITE);
+	}
+	public void batch() {
+		getApp().add(ssHead, 0);	// 머리 배치
+		getApp().add(ssBody, 1);	// 몸 배치
+		for(int i = 0; i < 5; i++) {
+			getApp().add(ssLifes.get(i), 1);
+		}
+		getApp().add(laKey);
+		getApp().add(laBomb);
+	}
+	
+	@Override
+	public void moveRight() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isRight() == false) {
+//					System.out.println(TAG + "오른쪽으로 움직임");
+					setRight(true);
+					setViewDirect(ViewDirect.RIGHT);
+					while(isRight()) {
+						// 벽 충돌 검사
+						if(getXChar() + IsaacSize.BODYWIDTH > 810) {
+							setRight(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() && getXCenter() < rock.get(i).getXStructure() + StructureSize.WIDTH 
+								&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > rock.get(i).getYStructure() && getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setRight(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike 밟을 떄
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() && getXCenter() < spike.get(i).getXStructure() + StructureSize.WIDTH 
+									&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > spike.get(i).getYStructure() && getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setXChar(getXChar() + 1);	
+						setXCenter(getXCenter() + 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveLeft() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isLeft() == false) {
+//					System.out.println(TAG + "왼쪽으로 움직임");
+					setLeft(true);
+					setViewDirect(ViewDirect.LEFT);
+					while(isLeft()) {
+						if(getXChar() < 130) {
+							setLeft(false);	
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() > rock.get(i).getXStructure() && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH && 
+								getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > rock.get(i).getYStructure() && 
+								getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setLeft(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike 밟을 떄
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() > spike.get(i).getXStructure() && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH && 
+								getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > spike.get(i).getYStructure() && 
+								getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setXChar(getXChar() - 1);
+						setXCenter(getXCenter() - 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	
+	@Override
+	public void moveDown() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isDown() == false) {
+//					System.out.println(TAG + "아래쪽으로 움직임");
+					setDown(true);
+					setViewDirect(ViewDirect.DOWN);
+					while(isDown()) {
+						if(getYChar() > 440) {
+							setDown(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > rock.get(i).getYStructure() && 
+								getYCenter() < rock.get(i).getYStructure() + StructureSize.HEIGHT) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike밟을 때
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH - 5&& 
+								getYCenter() + (IsaacSize.HEADHEIGHT- yPlusBody) + 5 > spike.get(i).getYStructure() && 
+								getYCenter() < spike.get(i).getYStructure() + StructureSize.HEIGHT) {
+								getSpikeDamage();
+							}
+						}
+						setYChar(getYChar() + 1);
+						setYCenter(getYCenter() + 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveUp() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isUp() == false) {
+//					System.out.println(TAG + "위쪽으로 움직임");
+					setUp(true);
+					setViewDirect(ViewDirect.UP);
+					while(isUp()) {
+						if(getYChar() < 100) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						boolean isRockCollision = false;
+						// 바위 충돌 검사.
+						for(int i = 0; i < rock.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > rock.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < rock.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter()> rock.get(i).getYStructure() && 
+								getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < rock.get(i).getYStructure() + StructureSize.HEIGHT ) {
+								isRockCollision = true;
+								break;
+							}
+						}
+						if(isRockCollision) {
+							setUp(false);
+							refreshDirect();
+							break;
+						}
+						// 바위 충돌 검사. 끝
+						getItem();
+						// spike밟을 때
+						for(int i = 0; i < spike.size(); i++) {
+							if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > spike.get(i).getXStructure() + 5 && 
+								getXCenter() - (IsaacSize.HEADWIDTH / 2) < spike.get(i).getXStructure() + StructureSize.WIDTH - 5 && 
+								getYCenter()> spike.get(i).getYStructure() && 
+								getYCenter() + (IsaacSize.BODYHEIGHT - yPlusBody)  < spike.get(i).getYStructure() + StructureSize.HEIGHT ) {
+								getSpikeDamage();
+							}
+						}
+						setYChar(getYChar() - 1);
+						setYCenter(getYCenter() - 1);
+						moveMotion();
+						try {
+							Thread.sleep(moveSpeed);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					ssBody.setXPos(0);
+					ssHead.drawObject(getXChar(), getYChar());
+					ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+				}
+			}
+		}).start();
+	}
+	@Override
+	public void moveMotion() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				int motion = 0;
+				if(isMoveStart() == false) {
+					setMoveStart(true);
+					while(!isDead()) {
+						if(isDown() && getViewDirect() == ViewDirect.DOWN) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.DOWN) {
+								ssHead.setXPos(0);
+								ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isLeft() && getViewDirect() == ViewDirect.LEFT) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.LEFT) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
+								ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT * 2 + Gap.ROWGAP * 3);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isUp() && getViewDirect() == ViewDirect.UP) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.UP) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
+								ssBody.setYPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						else if(isRight() && getViewDirect() == ViewDirect.RIGHT) {
+							if(motion > 9)
+								motion = 0;
+							ssBody.setXPos((IsaacSize.BODYWIDTH * motion) + (Gap.COLUMNGAP * motion));
+							if(getViewDirect() == ViewDirect.RIGHT) {
+								ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);	// 머리 이미지 x좌표
+								ssBody.setYPos(IsaacSize.HEADHEIGHT + IsaacSize.BODYHEIGHT + Gap.ROWGAP * 2);	// 몸 이미지 y좌표
+								ssHead.drawObject(getXChar(), getYChar());
+								ssBody.drawObject(getXChar() + xPlusBody, getYChar() + yPlusBody);
+								motion += 1;
+							}
+						}
+						
+						try {
+							Thread.sleep(40);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+						
+					}
+				}
+			}
+		}).start();
+	}
+	public void refreshDirect() {
+		if(isaac.isDown()) {
+			isaac.setViewDirect(ViewDirect.DOWN);
+		}
+		if(isaac.isLeft()) {
+			isaac.setViewDirect(ViewDirect.LEFT);
+		}
+		if(isaac.isUp()) {
+			isaac.setViewDirect(ViewDirect.UP);
+		}
+		if(isaac.isRight()) {
+			isaac.setViewDirect(ViewDirect.RIGHT);
+		}
+	}
+	@Override
+	public void attack() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+					closeEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					try {
+						Thread.sleep(300);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					openEye(isaac.getViewDirect());
+					ssHead.drawObject(getXChar(), getYChar());
+					isaac.getBulletControl().addBullet("isaac", isaac.getAttackDamge(), isaac.getViewDirect(), isaac.getXChar(), isaac.getYChar());
+			}
+		}).start();
+	}
+	
+	public void closeEye(int viewDirect) {
+		switch (viewDirect) {
+		case 1:	// 보는 방향 아래
+			ssHead.setXPos(IsaacSize.HEADWIDTH + Gap.COLUMNGAP);
+			break;
+		case 2:	// 보는 방향 왼쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 7 + Gap.COLUMNGAP * 7);
+			break;
+		case 3:	// 보는 방향 위
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 5 + Gap.COLUMNGAP * 5);
+			break;
+		case 4:	// 보는 방향 오른쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 3 + Gap.COLUMNGAP * 3);
+			break;
+		}
+	}
+	public void openEye(int viewDirect) {
+		switch (viewDirect) {
+		case 1:	// 보는 방향 아래
+			ssHead.setXPos(0);
+			break;
+		case 2:	// 보는 방향 왼쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 6 + Gap.COLUMNGAP * 6);
+			break;
+		case 3:	// 보는 방향 위
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 4 + Gap.COLUMNGAP * 4);
+			break;
+		case 4:	// 보는 방향 오른쪽
+			ssHead.setXPos(IsaacSize.HEADWIDTH * 2 + Gap.COLUMNGAP * 2);
+			break;
+		}
+	}
+	public void reDrawLife() {
+		double currentLife = getLife();
+		for(int i = 0; i < 5; i++) {
+			if(currentLife >= 1) {
+				ssLifes.get(i).setXPos(0);
+				currentLife -= 1;
+			} else if(currentLife > 0 && currentLife < 1) {
+				ssLifes.get(i).setXPos(LifeSize.WIDTH + Gap.COLUMNGAP);
+				currentLife -= 0.5;
+			} else {
+				ssLifes.get(i).setXPos(LifeSize.WIDTH * 2 + Gap.COLUMNGAP * 2);
+			}
+		}
+		for(int i = 0; i < 5; i++) {
+			ssLifes.get(i).drawObject(10 + (i * 30), 10);
+		}
+	}
+	public void getSpikeDamage() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isOnSpike == false) {
+					isOnSpike = true;
+					isaac.setLife(getIsaac().getLife() - 0.5);
+					isaac.reDrawLife();
+					
+					try {
+						Thread.sleep(3000);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					isOnSpike = false;
+				}
+			}
+		}).start();
+	}
+	public void useBomb() {
+		if(bombCount != 0) {
+			bombCount -= 1;
+			laBomb.setText(Integer.toString(bombCount));
+			if(isBomb == false) {
+				isBomb = true;
+				bombMotion();
+			}
+		}
+	}
+	public void bombMotion() {
+		if(isBomb) {
+			new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					int x = getXCenter() - 20;
+					int y = getYCenter() - 20;
+					getApp().add(ssBomb);
+					for(int i = 0; i < 6; i++) {
+						ssBomb.setXPos(BombSize.SETBOMBWIDTH * i + Gap.COLUMNGAP * i);
+						ssBomb.drawObject(x, y);
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					getApp().remove(ssBomb);
+					getApp().repaint();
+					getApp().add(ssExplosion);
+					x -= 20;
+					y -= 45;
+					for(int i = 0; i < 12; i++) {
+						ssExplosion.setXPos(ExplosionSize.WIDTH * (i % 4) + Gap.COLUMNGAP * (i % 4));
+						ssExplosion.setYPos(ExplosionSize.HEIGHT * (i / 4) + Gap.COLUMNGAP * (i / 4));
+						ssExplosion.drawObject(x, y);
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					for(int i = 0; i < rock.size(); i++) {
+						int distance =Math.pow(a, b)(rock.get(i).getXStructure() - x)
+					}
+					getApp().remove(ssExplosion);
+					
+				}
+			}).start();
+			
+			isBomb = false;
+		}
+	}
+	public void getItem() {
+		for(int i = 0; i < items.size(); i++) {
+			if(items.get(i).isDrop()) {
+				if(getXCenter() > items.get(i).getXItem() && 
+					getXCenter() < items.get(i).getXItem() + items.get(i).getSsItem().getWidth() && 
+					getYCenter() + IsaacSize.HEADHEIGHT + yPlusBody > items.get(i).getYItem() && 
+					getYCenter() < items.get(i).getYItem() + items.get(i).getSsItem().getHeight()) {
+					items.get(i).setDrop(false);
+					if(items.get(i).getSsItem().getGubun() == "key") {
+						keyCount += 1;
+						laKey.setText(Integer.toString(keyCount));
+					}else if(items.get(i).getSsItem().getGubun() == "bomb") {
+						bombCount += 1;
+						laBomb.setText(Integer.toString(bombCount));
+					}
+					getItemMotion(items.get(i));
+				}
+			}
+			
+		}
+	}
+	public void getItemMotion(Item item) {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				getApp().remove(ssHead);
+				getApp().remove(ssBody);
+				int col = 2;
+				for(int i = 0; i < 2; i++) {
+					col += i;
+					item.getSsItem().drawObject(getXChar() + 15, getYChar() - 10);
+					ssTotal.setXPos(IsaacSize.TOTALWIDTH * col + Gap.COLUMNGAP * col);
+					ssTotal.setYPos(yTotalSize);
+					ssTotal.drawObject(getXChar(), getYChar());
+					getApp().add(ssTotal);
+					getApp().repaint();
+					try {
+						Thread.sleep(200);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				getApp().remove(item.getSsItem());
+				getApp().remove(ssTotal);
+				getApp().repaint();
+				getApp().add(ssHead, 0);	// 머리 배치
+				getApp().add(ssBody, 1);	// 몸 배치
+			}
+		}).start();
+		
+	}
+	public void dead() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(isaac.getLife() == 0) {
+					getApp().remove(ssHead);
+					getApp().remove(ssBody);
+					ssTotal.setYPos(yTotalSize + Gap.ROWGAP + IsaacSize.TOTALHEIGHT);
+					for(int i = 0; i < 3; i++) {
+						ssTotal.setXPos(IsaacSize.TOTALWIDTH * i + Gap.COLUMNGAP * i);
+						ssTotal.drawObject(getXChar(), getYChar());
+						try {
+							Thread.sleep(200);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+					isaac.setDead(true);
+				}
+			}
+		}).start();
+	}
+	
+}
+
+
+
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.getClipboardData(ClipboardOperationAction.java:439)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.doCutCopyWithImportsOperation(ClipboardOperationAction.java:366)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.internalDoOperation(ClipboardOperationAction.java:326)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.run(ClipboardOperationAction.java:276)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor68.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1111)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4380)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1512)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1535)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1520)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1549)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1545)
+	at org.eclipse.swt.widgets.Canvas.sendKeyEvent(Canvas.java:522)
+	at org.eclipse.swt.widgets.Control.doCommandBySelector(Control.java:1081)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6184)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSResponder.interpretKeyEvents(NSResponder.java:59)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:606)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6016)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:235)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2150)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2401)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6136)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5386)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5522)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3786)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2020-12-15 17:09:52.125
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.getClipboardData(ClipboardOperationAction.java:439)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.doCutCopyWithImportsOperation(ClipboardOperationAction.java:366)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.internalDoOperation(ClipboardOperationAction.java:326)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.run(ClipboardOperationAction.java:276)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor68.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1111)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4380)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1512)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1535)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1520)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1549)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1545)
+	at org.eclipse.swt.widgets.Canvas.sendKeyEvent(Canvas.java:522)
+	at org.eclipse.swt.widgets.Control.doCommandBySelector(Control.java:1081)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6184)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSResponder.interpretKeyEvents(NSResponder.java:59)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:606)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6016)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:235)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2150)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2401)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6136)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5386)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5522)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3786)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2020-12-15 17:09:52.125
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1276)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2020)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3750)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1932)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1963)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2193)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2965)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2773)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1945)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:849)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2438)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2032)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1372)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2203)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2968)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3302)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.getClipboardData(ClipboardOperationAction.java:439)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.doCutCopyWithImportsOperation(ClipboardOperationAction.java:366)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.internalDoOperation(ClipboardOperationAction.java:326)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.run(ClipboardOperationAction.java:276)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor68.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1111)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4380)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1512)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1535)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1520)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1549)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1545)
+	at org.eclipse.swt.widgets.Canvas.sendKeyEvent(Canvas.java:522)
+	at org.eclipse.swt.widgets.Control.doCommandBySelector(Control.java:1081)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6184)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSResponder.interpretKeyEvents(NSResponder.java:59)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:606)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6016)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:235)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2150)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2401)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6136)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5386)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5522)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3786)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:21:26.468
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:22:15.991
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:27:08.202
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:29:31.214
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:30:58.380
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:36:15.710
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 17:38:00.349
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2020-12-15 18:07:57.752
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

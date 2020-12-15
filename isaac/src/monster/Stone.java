@@ -11,29 +11,15 @@ import objectSize.Gap;
 import objectSize.StoneSize;
 import objectSize.ViewDirect;
 import structure.Rock;
+import structure.Structure;
 
 public class Stone extends Monster {
 
 	private Monster stone = this;
 	
-	public Stone(JFrame app, Isaac isaac, Vector<Rock> rock, String url, int imgWidth, int imgHeight) {
-		super(app, isaac, rock, url, imgWidth, imgHeight);
-//		new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				while(!isDead()) {
-//					System.out.println(isDead());
-//					if(getLife() == 0) {
-//						 
-//						setDead(true);
-//						break;
-//					}
-//				}
-//				if(isDead()) {
-//					dead();
-//				}
-//			}
-//		}).start();
+	public Stone(JFrame app, Isaac isaac, Vector<Structure> Structures, String url, int imgWidth, int imgHeight) {
+		super(app, isaac, Structures, url, imgWidth, imgHeight);
+
 		attack();
 	}
 
@@ -46,11 +32,11 @@ public class Stone extends Monster {
 		setYChar(115);	
 		setLife(20);
 		setAttackDamge(1);
-		setBulletControl(new BulletControl(getApp(), getRock(), getIsaac(), null));
+		setBulletControl(new BulletControl(getApp(), getStructures(), getIsaac(), null));
 	}
 	public void batch() {
 		getSsMonster().drawObject(getXChar(), getYChar());
-		getApp().add(getSsMonster(), 0);
+		getApp().add(getSsMonster(), 2);
 		
 	}
 	public void attack() {

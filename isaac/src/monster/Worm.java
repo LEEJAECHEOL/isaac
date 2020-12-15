@@ -11,12 +11,13 @@ import objectSize.IsaacSize;
 import objectSize.ViewDirect;
 import objectSize.WormSize;
 import structure.Rock;
+import structure.Structure;
 
 public class Worm extends Monster {
 	private final static String GUBUN = "Worm : ";
 
-	public Worm(JFrame app, Isaac isaac, Vector<Rock> rock, String url, int imgWidth, int imgHeight) {
-		super(app, isaac, rock, url, imgWidth, imgHeight);
+	public Worm(JFrame app, Isaac isaac, Vector<Structure> Structures, String url, int imgWidth, int imgHeight) {
+		super(app, isaac, Structures, url, imgWidth, imgHeight);
 		new Thread(new Runnable() {
 			@Override
 			public void run() {

@@ -15,7 +15,6 @@ public class Item {
    private final static String GUBUN = "Item : ";
    private SpriteSheet ssItem;
    private int xItem, yItem;
-   private int width, height;
    private boolean isDrop = true;
    
 	public Item(JFrame app,String url, String gubun, int xItem, int yItem, int width, int height) {

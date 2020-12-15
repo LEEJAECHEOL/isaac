@@ -15,6 +15,7 @@ public class Structure {
 	private JFrame app;
 	private SpriteSheet ssStructure;
 	private int xStructure, yStructure;
+	private boolean isBroken = false;
 	
 	public Structure(JFrame app,String url, String gubun, int xStructure, int yStructure) {
 //		System.out.println(TAG + "만들어짐");
