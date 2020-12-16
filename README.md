@@ -1,8 +1,9 @@
 # 간단한 아이작 게임 만들기
 
 ![isaac](https://github.com/LEEJAECHEOL/isaac/blob/master/document/isaac.png)
-> 반갑습니다. 2주동안 아이작 게임을 제작했습니다. 제작과 관련된 내용을 기술하였습니다.   
+> 반갑습니다. 2주동안 아이작 게임을 한 맵을 통해 게임을 제작했습니다.  
 > 제작자 : 이재철, 동태완
+> PPT Link : [PPT DOWNLOAD](https://github.com/LEEJAECHEOL/isaac/LEEJAECHEOL/isaac/raw/master/document/%EC%95%84%EC%9D%B4%EC%9E%91%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pptx)
 
 ## 시연 영상
 [![Video Label](https://github.com/LEEJAECHEOL/isaac/blob/master/document/playImg.png)](https://www.youtube.com/watch?v=wxsahgC8Cis)
