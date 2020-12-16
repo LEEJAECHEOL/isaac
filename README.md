@@ -6,7 +6,7 @@
 > PPT Link : [PPT DOWNLOAD](https://github.com/LEEJAECHEOL/isaac/LEEJAECHEOL/isaac/raw/master/document/%EC%95%84%EC%9D%B4%EC%9E%91%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pptx)
 
 ## 시연 영상
-[![Video Label](https://github.com/LEEJAECHEOL/isaac/blob/master/document/playImg.png)](https://www.youtube.com/watch?v=wxsahgC8Cis)
+[![Video Label](https://github.com/LEEJAECHEOL/isaac/blob/master/document/playImg.png)](https://www.youtube.com/watch?v=qoJSMnpbHLQ)
 
 
 ## 기능
@@ -57,6 +57,11 @@
 > ![rock](https://github.com/LEEJAECHEOL/isaac/blob/master/isaac/images/item/recoveryLife.png)
   - 플레이어 생명력 1 회복
 * 아이템 줍기   
+#### 5. 불릿
+* 아이작 불릿
+![rock](https://github.com/LEEJAECHEOL/isaac/blob/master/isaac/images/bullet/isaacBullet.png)
+* 적 불릿
+![rock](https://github.com/LEEJAECHEOL/isaac/blob/master/isaac/images/bullet/enemyBullet.png)
 
 ## UML
 > ![rock](https://github.com/LEEJAECHEOL/isaac/blob/master/document/uml.png)
