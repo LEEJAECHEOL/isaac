@@ -676,7 +676,6 @@ public class Isaac extends Character{
 					getApp().remove(ssHead);
 					getApp().remove(ssBody);
 					getApp().repaint();
-					getApp().add(ssTotal,1);
 					ssTotal.setYPos(yTotalSize + Gap.ROWGAP + IsaacSize.TOTALHEIGHT);
 					for(int i = 0; i < 3; i++) {
 						ssTotal.setXPos(IsaacSize.TOTALWIDTH * i + Gap.COLUMNGAP * i);

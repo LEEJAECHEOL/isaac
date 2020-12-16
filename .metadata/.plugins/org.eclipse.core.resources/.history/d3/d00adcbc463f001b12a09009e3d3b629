@@ -62,7 +62,6 @@ public class Isaac extends Character{
 		init(structures, monster, items, door);
 		setting();
 		batch();
-		
 	}
 	public void init(Vector<Structure> structures, Vector<Monster> monster, Vector<Item> items, Vector<Door> door) {
 		ssHead = new SpriteSheet("isaac/isaac.png", "isaacssHead", 0, 0, IsaacSize.HEADWIDTH, IsaacSize.HEADHEIGHT);
@@ -526,7 +525,6 @@ public class Isaac extends Character{
 					isOnSpike = true;
 					isaac.setLife(getIsaac().getLife() - 0.5);
 					isaac.reDrawLife();
-					isaac.dead();
 					
 					try {
 						Thread.sleep(3000);
@@ -675,8 +673,6 @@ public class Isaac extends Character{
 				if(isaac.getLife() == 0) {
 					getApp().remove(ssHead);
 					getApp().remove(ssBody);
-					getApp().repaint();
-					getApp().add(ssTotal,1);
 					ssTotal.setYPos(yTotalSize + Gap.ROWGAP + IsaacSize.TOTALHEIGHT);
 					for(int i = 0; i < 3; i++) {
 						ssTotal.setXPos(IsaacSize.TOTALWIDTH * i + Gap.COLUMNGAP * i);
@@ -688,7 +684,6 @@ public class Isaac extends Character{
 						}
 					}
 					isaac.setDead(true);
-					Thread.interrupted();
 				}
 			}
 		}).start();

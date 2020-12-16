@@ -86,7 +86,7 @@ public class IsaacApp extends JFrame {
 		
 		items.add(new Key(app, "item/key.png", "key", 790, 450, KeySize.WIDTH, KeySize.HEIGHT ));
 		items.add(new Bomb(app, "item/bomb.png", "bomb", 140, 400, BombSize.PICKWIDTH, BombSize.PICKHEIGHT ));
-		items.add(new Heart(app, "item/RecoveryLife.png", "life", 795, 125, RecoveryLifeSize.WIDTH, RecoveryLifeSize.HEIGHT ));
+		items.add(new Heart(app, "item/RecoveryLife.png", "life", 400, 400, RecoveryLifeSize.WIDTH, RecoveryLifeSize.HEIGHT ));
 		
 		isaac = new Isaac(app, structures, monster, items, door);
 		monster.add(new Worm(app, isaac, structures, "monster/worm.png", WormSize.WIDTH, WormSize.HEIGHT));

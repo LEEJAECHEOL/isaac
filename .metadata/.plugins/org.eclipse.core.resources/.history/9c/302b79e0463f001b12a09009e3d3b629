@@ -124,7 +124,6 @@ public class BulletControl {
 												collisionBulletCount++;
 												isaac.setLife(isaac.getLife() - 1); // 생명력 감소
 												isaac.reDrawLife();
-												getIsaac().dead();
 											}
 											bullets.get(i).setCollide(true);
 										}
