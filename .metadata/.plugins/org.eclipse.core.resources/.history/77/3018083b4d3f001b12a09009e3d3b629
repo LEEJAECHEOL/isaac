@@ -668,7 +668,7 @@ public class Isaac extends Character{
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				if(isaac.getLife() <= 0 && !isDead()) {
+				if(isaac.getLife() == 0) {
 					getApp().remove(ssHead);
 					getApp().remove(ssBody);
 					getApp().repaint();

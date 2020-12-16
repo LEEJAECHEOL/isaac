@@ -11,10 +11,12 @@ import javax.swing.JLabel;
 
 import SpriteSheet.SpriteSheet;
 import bullet.BulletControl;
+import item.Bomb;
 import item.Item;
 import lombok.Data;
 import monster.Monster;
 import objectSize.BombSize;
+import objectSize.DoorSize;
 import objectSize.ExplosionSize;
 import objectSize.Gap;
 import objectSize.IsaacSize;
@@ -22,6 +24,8 @@ import objectSize.LifeSize;
 import objectSize.StructureSize;
 import objectSize.ViewDirect;
 import structure.Door;
+import structure.Rock;
+import structure.Spike;
 import structure.Structure;
 
 @Data
@@ -668,7 +672,7 @@ public class Isaac extends Character{
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				if(isaac.getLife() <= 0 && !isDead()) {
+				if(isaac.getLife() == 0) {
 					getApp().remove(ssHead);
 					getApp().remove(ssBody);
 					getApp().repaint();

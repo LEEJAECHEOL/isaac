@@ -8,10 +8,14 @@ import SpriteSheet.SpriteSheet;
 import character.Character;
 import character.Isaac;
 import lombok.Data;
+import objectSize.BulletSize;
 import objectSize.DeadSize;
 import objectSize.Gap;
+import objectSize.IsaacSize;
 import objectSize.StructureSize;
 import objectSize.ViewDirect;
+import objectSize.WormSize;
+import structure.Rock;
 import structure.Structure;
 
 @Data

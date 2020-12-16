@@ -7,8 +7,10 @@ import javax.swing.JFrame;
 import SpriteSheet.SpriteSheet;
 import character.Isaac;
 import objectSize.Gap;
+import objectSize.IsaacSize;
 import objectSize.ViewDirect;
 import objectSize.WormSize;
+import structure.Rock;
 import structure.Structure;
 
 public class Worm extends Monster {

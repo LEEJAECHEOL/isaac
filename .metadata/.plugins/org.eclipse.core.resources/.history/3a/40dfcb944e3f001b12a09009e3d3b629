@@ -115,20 +115,18 @@ public class BulletControl {
 										}
 									}
 								}else {
-									if(!getIsaac().isDead()) {
-										if(bullets.get(i).getXBullet() + BulletSize.WIDTH > isaac.getXChar() && 
-												bullets.get(i).getXBullet() < isaac.getXChar() + IsaacSize.HEADWIDTH && 
-												bullets.get(i).getYBullet() + BulletSize.HEIGHT > isaac.getYChar() && 
-												bullets.get(i).getYBullet() < isaac.getYChar() + IsaacSize.HEADHEIGHT) {
-												if(!bullets.get(i).isCollide()) {
-													collisionBulletCount++;
-													isaac.setLife(isaac.getLife() - 1); // 생명력 감소
-													isaac.reDrawLife();
-													getIsaac().dead();
-												}
-												bullets.get(i).setCollide(true);
+									if(bullets.get(i).getXBullet() + BulletSize.WIDTH > isaac.getXChar() && 
+										bullets.get(i).getXBullet() < isaac.getXChar() + IsaacSize.HEADWIDTH && 
+										bullets.get(i).getYBullet() + BulletSize.HEIGHT > isaac.getYChar() && 
+										bullets.get(i).getYBullet() < isaac.getYChar() + IsaacSize.HEADHEIGHT) {
+											if(!bullets.get(i).isCollide()) {
+												collisionBulletCount++;
+												isaac.setLife(isaac.getLife() - 1); // 생명력 감소
+												isaac.reDrawLife();
+												getIsaac().dead();
 											}
-									}
+											bullets.get(i).setCollide(true);
+										}
 								}
 								
 								// 충돌이 아니면 계속 그림
