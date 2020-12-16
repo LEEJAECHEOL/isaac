@@ -112,6 +112,7 @@ public class Worm extends Monster {
 		getSsMonster().drawObject(getXChar(), getYChar());
 		getIsaac().setLife(getIsaac().getLife() - 1);	// 플레이어 생명력 1감소
 		getIsaac().reDrawLife();
+		getIsaac().dead();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
