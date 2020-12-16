@@ -58,3 +58,4 @@
 * 아이템 줍기   
 
 ## UML
+> ![rock](https://github.com/LEEJAECHEOL/isaac/blob/master/document/uml.png)
