@@ -603,7 +603,7 @@ public class Isaac extends Character{
 	public boolean nearItemCheck(Item item) {
 		if(getXCenter() > item.getXItem() && 
 				getXCenter() < item.getXItem() + item.getSsItem().getWidth() && 
-				getYCenter() + IsaacSize.HEADHEIGHT + yPlusBody > item.getYItem() && 
+				getYCenter() > item.getYItem() && 
 				getYCenter() < item.getYItem() + item.getSsItem().getHeight()) {
 			return true;
 		}else {

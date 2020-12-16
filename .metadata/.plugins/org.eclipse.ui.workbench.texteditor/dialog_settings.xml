@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=" monster"/>
+		<item key="selection" value="SpikeDa"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="spikeda"/>
+			<item value="spike"/>
+			<item value="getItem"/>
+			<item value="getitem"/>
 			<item value=" monster"/>
 			<item value="isDeadCheck"/>
 			<item value="dead"/>
@@ -19,10 +23,6 @@
 			<item value="moveStart"/>
 			<item value="bulletControl"/>
 			<item value="bCon"/>
-			<item value="System"/>
-			<item value="system"/>
-			<item value="RLHEIGHT"/>
-			<item value="UDHEIGHT"/>
 		</list>
 		<list key="replacehistory">
 			<item value="HEIGHT"/>
