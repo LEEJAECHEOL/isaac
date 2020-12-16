@@ -625,10 +625,9 @@ public class Isaac extends Character{
 						laBomb.setText(Integer.toString(bombCount));
 					}
 					else if(items.get(i).getSsItem().getGubun() == "life") {
-						if(getLife() != 5) {
-							setLife(getLife() + 1);
-							reDrawLife();
-						}
+						double nowLife = getLife() + 1;
+						setLife(nowLife);
+						reDrawLife();
 					}
 					getItemMotion(items.get(i));
 				}
