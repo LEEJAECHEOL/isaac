@@ -35,7 +35,7 @@ public class BulletControl {
 	}
 	
 	public void addBullet(String gubun, double attackDamage, int direct, int xBullet, int yBullet) {
-		if(!delayBullet && !isaac.isDead()) {
+		if(!delayBullet) {
 			if(direct == ViewDirect.DOWN) {
 				bullets.add(new Bullet(gubun, attackDamage, direct, xBullet + 15, yBullet + 18));
 			} else if(direct == ViewDirect.LEFT) {

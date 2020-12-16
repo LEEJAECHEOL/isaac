@@ -669,7 +669,6 @@ public class Isaac extends Character{
 			@Override
 			public void run() {
 				if(isaac.getLife() <= 0 && !isDead()) {
-					isaac.setDead(true);
 					getApp().remove(ssHead);
 					getApp().remove(ssBody);
 					getApp().repaint();
@@ -684,6 +683,7 @@ public class Isaac extends Character{
 							e.printStackTrace();
 						}
 					}
+					isaac.setDead(true);
 					Thread.interrupted();
 				}
 			}
