@@ -53,25 +53,25 @@ public class Monster extends Character{
 	}
 	public void moveDirectCheck() {
 		// 오른쪽 
-		if(getXChar() + WormSize.WIDTH < getIsaac().getXChar() + 15) {
+		if(getXCenter() + getImgWidth() / 2 < getIsaac().getXCenter() ) {
 			setRight(true);
 		} else {
 			setRight(false);
 		}
 		// 왼쪽
-		if(getXChar() > getIsaac().getXChar() + IsaacSize.HEADWIDTH - 15) {
+		if(getXCenter() - getImgWidth() / 2 > getIsaac().getXCenter()) {
 			setLeft(true);
 		} else {
 			setLeft(false);
 		}
 		// 아래쪽
-		if(getYChar() + WormSize.HEIGHT < getIsaac().getYChar() + 15) {
+		if(getYCenter() + getImgHeight() < getIsaac().getYCenter()) {
 			setDown(true);
 		}else {
 			setDown(false);
 		}
 		// 위쪽
-		if(getYChar() > getIsaac().getYChar() + IsaacSize.HEADHEIGHT ) {
+		if(getYCenter() - getImgHeight() / 2 > getIsaac().getYCenter()) {
 			setUp(true);
 		}else {
 			setUp(false);
@@ -81,23 +81,31 @@ public class Monster extends Character{
 		for(int i = 0; i < structures.size(); i++) {
 			if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
 				// 오른쪽으로 이동중일 때 
-				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && getXChar() + getImgWidth() < structures.get(i).getXStructure() + StructureSize.WIDTH 
-					&& getYChar() + getImgHeight() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && 
+					getXChar() + getImgWidth() < structures.get(i).getXStructure() + StructureSize.WIDTH && 
+					getYChar() + getImgHeight() > structures.get(i).getYStructure() && 
+					getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
 					setRight(false);
 				}
 				// 왼쪽으로 이동중일때
-				if(getXChar() > structures.get(i).getXStructure() && getXChar()< structures.get(i).getXStructure() + StructureSize.WIDTH 
-					&& getYChar() + getImgHeight() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+				if(getXChar() > structures.get(i).getXStructure() && 
+					getXChar()< structures.get(i).getXStructure() + StructureSize.WIDTH && 
+					getYChar() + getImgHeight() > structures.get(i).getYStructure() && 
+					getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
 					setLeft(false);
 				}
 				// 아래쪽으로 이동중 일때
-				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && getXChar() < structures.get(i).getXStructure() + StructureSize.WIDTH 
-					&& getYChar() + getImgHeight() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && 
+					getXChar() < structures.get(i).getXStructure() + StructureSize.WIDTH && 
+					getYChar() + getImgHeight() > structures.get(i).getYStructure() && 
+					getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
 					setDown(false);
 				}
 				// 위쪽으로 이동중 일때
-				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && getXChar() < structures.get(i).getXStructure() + StructureSize.WIDTH 
-					&& getYChar() > structures.get(i).getYStructure() && getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+				if(getXChar() + getImgWidth() > structures.get(i).getXStructure() && 
+					getXChar() < structures.get(i).getXStructure() + StructureSize.WIDTH && 
+					getYChar() > structures.get(i).getYStructure() && 
+					getYChar() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
 					setUp(false);
 				}
 			}
@@ -107,8 +115,9 @@ public class Monster extends Character{
 	public void moveRight() {
 		if(isRight()) {
 			setViewDirect(ViewDirect.RIGHT);
-			if(getXChar() + WormSize.WIDTH < isaac.getXChar() + 15) {
+			if(getXCenter() < isaac.getXCenter()) {
 				setXChar(getXChar() + 1);
+				setXCenter(getXCenter() + 1);
 			}
 		}
 	}
@@ -116,8 +125,9 @@ public class Monster extends Character{
 	public void moveLeft() {
 		if(isLeft()) {
 			setViewDirect(ViewDirect.LEFT);
-			if(getXChar() > isaac.getXChar() + IsaacSize.HEADWIDTH - 15) {
+			if(getXCenter() > isaac.getXCenter()) {
 				setXChar(getXChar() - 1);
+				setXCenter(getXCenter() - 1);
 			}
 		}
 	}
@@ -125,15 +135,19 @@ public class Monster extends Character{
 	public void moveUp() {
 		if(isUp()) {
 			setViewDirect(ViewDirect.UP);
-			setYChar(getYChar() - 1);
+			if(getYCenter() > isaac.getYCenter()) {
+				setYChar(getYChar() - 1);
+				setYCenter(getYCenter() - 1);
+			}
 		}
 	}
 	@Override
 	public void moveDown() {
 		if(isDown()) {
 			setViewDirect(ViewDirect.DOWN);
-			if(getYChar() + WormSize.HEIGHT < isaac.getYChar() + 15) {
+			if(getYCenter() < isaac.getYCenter()) {
 				setYChar(getYChar() + 1);
+				setYCenter(getYCenter() + 1);
 			}
 		}
 	}

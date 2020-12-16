@@ -56,7 +56,9 @@ public class Worm extends Monster {
 	public void setting() {
 		setViewDirect(ViewDirect.RIGHT);
 		setXChar(180);
-		setYChar(130);	
+		setYChar(130);
+		setXCenter(getXChar() + WormSize.WIDTH / 2); 
+		setYCenter(getYChar() + WormSize.HEIGHT / 2); 
 		setLife(20);
 		setAttackDamge(1);
 	}
@@ -64,52 +66,33 @@ public class Worm extends Monster {
 		getSsMonster().drawObject(getXChar(), getYChar());
 		getApp().add(getSsMonster(), 0);
 	}
+	
+	public void attckCheck(int direct, int range) {
+		setAttacking(true);
+		int xDistance = getIsaac().getXCenter() - getXCenter();
+		int yDistance = getIsaac().getYCenter() - getYCenter();
+		double distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+		if(distance < range) {
+			attackMotion(direct - 1);
+		}
+	}
 	@Override
 	public void attack() {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				int xDistance, yDistance;
 				switch (getViewDirect()) {
 					case ViewDirect.DOWN:
-						setAttacking(true);
-						xDistance = (getIsaac().getXChar()) - (getXChar());
-						yDistance = (getYChar() + WormSize.HEIGHT) - (getIsaac().getYChar() + 15);
-						xDistance = xDistance < 0 ? xDistance * -1 : xDistance;
-						yDistance = yDistance < 0 ? yDistance * -1 : yDistance;
-						if(xDistance < 25 && yDistance < 10) {
-							attackMotion(ViewDirect.DOWN - 1);
-						}
+						attckCheck(ViewDirect.DOWN, 53);
 						break;	
 					case ViewDirect.LEFT:
-						setAttacking(true);
-						xDistance = (getIsaac().getXChar() + IsaacSize.HEADWIDTH - 10) - (getXChar());
-						yDistance = getIsaac().getYChar() - getYChar();
-						xDistance = xDistance < 0 ? xDistance * -1 : xDistance;
-						yDistance = yDistance < 0 ? yDistance * -1 : yDistance;
-						if(xDistance < 10 && yDistance < 25) {
-							attackMotion(ViewDirect.LEFT - 1);
-						}
+						attckCheck(ViewDirect.LEFT, 35);
 						break;
 					case ViewDirect.UP:
-						setAttacking(true);
-						xDistance = (getIsaac().getXChar()) - (getXChar());
-						yDistance = getYChar() - (getIsaac().getYChar() + IsaacSize.HEADHEIGHT);
-						xDistance = xDistance < 0 ? xDistance * -1 : xDistance;
-						yDistance = yDistance < 0 ? yDistance * -1 : yDistance;
-						if(xDistance < 25 && yDistance < 10) {
-							attackMotion(ViewDirect.UP - 1);
-						}
+						attckCheck(ViewDirect.UP, 30);
 						break;
 					case ViewDirect.RIGHT:
-						setAttacking(true);
-						xDistance = (getIsaac().getXChar() + 10) - (getXChar() + WormSize.WIDTH);
-						yDistance = getIsaac().getYChar() - getYChar();
-						xDistance = xDistance < 0 ? xDistance * -1 : xDistance;
-						yDistance = yDistance < 0 ? yDistance * -1 : yDistance;
-						if(xDistance < 10 && yDistance < 25) {
-							attackMotion(ViewDirect.RIGHT - 1);
-						}
+						attckCheck(ViewDirect.RIGHT, 35);
 						break;
 				}
 				setAttacking(false);

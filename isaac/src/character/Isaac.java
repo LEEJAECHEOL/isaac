@@ -135,8 +135,10 @@ public class Isaac extends Character{
 						// 바위 충돌 검사.
 						for(int i = 0; i < structures.size(); i++) {
 							if(!structures.get(i).isBroken() && structures.get(i).getSsStructure().getGubun() == "rock") {
-								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() && getXCenter() < structures.get(i).getXStructure() + StructureSize.WIDTH 
-									&& getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > structures.get(i).getYStructure() && getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
+								if(getXCenter() + (IsaacSize.HEADWIDTH / 2) > structures.get(i).getXStructure() && 
+									getXCenter() < structures.get(i).getXStructure() + StructureSize.WIDTH && 
+									getYCenter() + IsaacSize.HEADHEIGHT - yPlusBody > structures.get(i).getYStructure() && 
+									getYCenter() < structures.get(i).getYStructure() + StructureSize.HEIGHT) {
 									isRockCollision = true;
 									break;
 								}
@@ -600,13 +602,20 @@ public class Isaac extends Character{
 			isBomb = false;
 		}
 	}
+	public boolean nearItemCheck(Item item) {
+		if(getXCenter() > item.getXItem() && 
+				getXCenter() < item.getXItem() + item.getSsItem().getWidth() && 
+				getYCenter() + IsaacSize.HEADHEIGHT + yPlusBody > item.getYItem() && 
+				getYCenter() < item.getYItem() + item.getSsItem().getHeight()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	public void getItem() {
 		for(int i = 0; i < items.size(); i++) {
 			if(items.get(i).isDrop()) {
-				if(getXCenter() > items.get(i).getXItem() && 
-					getXCenter() < items.get(i).getXItem() + items.get(i).getSsItem().getWidth() && 
-					getYCenter() + IsaacSize.HEADHEIGHT + yPlusBody > items.get(i).getYItem() && 
-					getYCenter() < items.get(i).getYItem() + items.get(i).getSsItem().getHeight()) {
+				if(nearItemCheck(items.get(i))) {
 					items.get(i).setDrop(false);
 					if(items.get(i).getSsItem().getGubun() == "key") {
 						keyCount += 1;

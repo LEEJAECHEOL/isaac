@@ -14,7 +14,6 @@
     <fullyQualifiedTypeName name="map.Background"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-    <fullyQualifiedTypeName name="structure.Structure"/>
     <fullyQualifiedTypeName name="structure.Spike"/>
     <fullyQualifiedTypeName name="structure.Rock"/>
     <fullyQualifiedTypeName name="objectSize.ViewDirect"/>
@@ -34,20 +33,24 @@
     <fullyQualifiedTypeName name="objectSize.DeadSize"/>
     <fullyQualifiedTypeName name="structure.Door"/>
     <fullyQualifiedTypeName name="java.security.NoSuchProviderException"/>
-    <fullyQualifiedTypeName name="java.util.Vector"/>
-    <fullyQualifiedTypeName name="item.Item"/>
     <fullyQualifiedTypeName name="objectSize.KeySize"/>
     <fullyQualifiedTypeName name="item.Key"/>
-    <fullyQualifiedTypeName name="objectSize.BombSize"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="SpriteSheet.SpriteSheet"/>
     <fullyQualifiedTypeName name="monster.Monster"/>
     <fullyQualifiedTypeName name="objectSize.DoorSize"/>
+    <fullyQualifiedTypeName name="item.Item"/>
+    <fullyQualifiedTypeName name="objectSize.IsaacSize"/>
+    <fullyQualifiedTypeName name="item.Bomb"/>
     <fullyQualifiedTypeName name="objectSize.Gap"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
-    <fullyQualifiedTypeName name="objectSize.IsaacSize"/>
+    <fullyQualifiedTypeName name="SpriteSheet.SpriteSheet"/>
+    <fullyQualifiedTypeName name="objectSize.ExplosionSize"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="structure.Structure"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="objectSize.BombSize"/>
 </qualifiedTypeNameHistroy>
